@@ -1,5 +1,5 @@
 module Termislator
-  class TextHandler
+  class TextResponseHandler
     def initialize response_body
       @text = response_body
     end

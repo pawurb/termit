@@ -1,5 +1,5 @@
 module Termislator
-  class VoiceHandler
+  class VoiceResponseHandler
 
   end
 end

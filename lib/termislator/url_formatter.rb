@@ -1,7 +1,6 @@
 module Termislator
   class UrlFormatter
     def initialize request_options
-      p request_options
       @request_options = request_options
     end
 
