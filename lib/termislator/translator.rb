@@ -7,15 +7,14 @@ require_relative 'voice_handler'
 module Termislator
   class Translator
     def initialize user_input
-      options = Termislator::UserInputParser.new(user_input).call
-      @url = Termislator::UrlFormatter.new(options).call
+      options = Termislator::UserInputParser.new(user_input).options
+      @url = Termislator::UrlFormatter.new(options).url
       @text = options[:text]
     end
 
-    def call
-      response = Termislator::DataFetcher.new(@url, @text).call
-      Termislator::TextHandler.new(response.body).call
+    def translate
+      response = Termislator::DataFetcher.new(@url, @text).data
+      Termislator::TextHandler.new(response.body).text
     end
-
   end
 end

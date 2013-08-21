@@ -4,7 +4,7 @@ module Termislator
       @request_options = request_options
     end
 
-    def call
+    def url
       construct_url
     end
 

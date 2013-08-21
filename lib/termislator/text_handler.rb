@@ -4,7 +4,7 @@ module Termislator
       @text = response_body
     end
 
-    def call
+    def text
       parse_text
     end
 

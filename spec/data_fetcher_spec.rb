@@ -14,7 +14,7 @@ describe Termislator::DataFetcher do
       Net::HTTP::stub(:new) { http }
       http.should_receive(:request).with(request)
       request.should_receive(:set_form_data).with(text: text)
-      fetcher.call.should eq :good_response
+      fetcher.data.should eq :good_response
     end
   end
 end

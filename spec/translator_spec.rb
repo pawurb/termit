@@ -6,7 +6,7 @@ describe Termislator::Translator do
   describe "call" do
     it "translates text correctly" do
       translator = Termislator::Translator.new [:en, :pl, 'it would require two large integer variables to store her weight, else she would cause a buffer overflow']
-      expect(translator.call).to eq 'wymagałoby to dwie duże liczby całkowite zmienne do przechowywania jej wagi, inaczej ona spowodować przepełnienie bufora'
+      expect(translator.translate).to eq 'wymagałoby to dwie duże liczby całkowite zmienne do przechowywania jej wagi, inaczej ona spowodować przepełnienie bufora'
     end
   end
 end

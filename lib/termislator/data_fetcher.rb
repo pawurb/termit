@@ -8,7 +8,7 @@ module Termislator
       @text = text
     end
 
-    def call
+    def data
       send_request
     end
 

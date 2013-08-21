@@ -6,7 +6,7 @@ module Termislator
       @user_input = user_input
     end
 
-    def call
+    def options
       parsed = parse_input
       validate_user_input parsed
       parsed
@@ -23,7 +23,6 @@ module Termislator
          target_lang: @user_input.shift.to_sym,
          text: @user_input.join(' ')
         }
-
       end
 
       def set_voice_flag
