@@ -1,6 +1,7 @@
 module Termislator
   class UrlFormatter
     def initialize request_options
+      p request_options
       @request_options = request_options
     end
 
@@ -12,7 +13,8 @@ module Termislator
 
       def construct_url
         data = @request_options
-        "http://translate.google.com/?tl=#{data[:target_lang]}&sl=#{data[:source_lang]}&ie=UTF-8&oe=UTF-8"
+        voice_url = data[:voice] ? "translate_tts" : ""
+        "http://translate.google.com/#{voice_url}?tl=#{data[:target_lang]}&sl=#{data[:source_lang]}&ie=UTF-8&oe=UTF-8"
       end
   end
 end
