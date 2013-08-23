@@ -2,18 +2,21 @@ require_relative 'user_input_parser'
 require_relative 'url_formatter'
 require_relative 'data_fetcher'
 require_relative 'text_response_handler'
-require_relative 'voice_response_handler'
+require_relative 'sound_response_handler'
+require_relative 'handler_factory'
 
 module Termislator
   class Translator
     def initialize options
+      @options = options
       @url = Termislator::UrlFormatter.new(options).url
-      @text = options[:text]
     end
 
     def translate
-      response = Termislator::DataFetcher.new(@url, @text).data
-      Termislator::TextResponseHandler.new(response.body).text
+      p @options
+      response = Termislator::DataFetcher.new(@url, @options[:text]).data
+      handler = Termislator::HandlerFactory.new(voice: @options[:voice], response_body: response.body ).handler
+      handler.display
     end
   end
 end

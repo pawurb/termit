@@ -7,7 +7,7 @@ describe Termislator::UserInputParser do
     end
   end
 
-  describe "call method" do
+  describe "options method" do
     context "when user has not given any arguments" do
       it "raises error" do
         parser = Termislator::UserInputParser.new []

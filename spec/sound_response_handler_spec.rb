@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe Termislator::VoiceResponseHandler do
+describe Termislator::SoundResponseHandler do
   pending "VoiceHandler specs waitin"
 end

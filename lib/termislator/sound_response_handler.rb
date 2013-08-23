@@ -1,5 +1,8 @@
 module Termislator
-  class VoiceResponseHandler
+  class SoundResponseHandler
+    def initialize response_body
+
+    end
 
   end
 end

@@ -2,7 +2,7 @@ require 'spec_helper'
 
 
 describe Termislator::DataFetcher do
-  describe "call method" do
+  describe "data method" do
     let(:url) { "http://translate.google.com/?tl=fr&sl=en&ie=UTF-8&oe=UTF-8" }
     let(:text) { "it would require two large integer variables to store her weight, else she would cause a buffer overflow." }
     it "should send the correct POST request" do

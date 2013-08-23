@@ -4,11 +4,11 @@ module Termislator
       @text = response_body
     end
 
-    def text
-      parse_text
+    def display
+      p parsed_text
     end
 
-    def parse_text
+    def parsed_text
       translation = @text.scan(/(TRANSLATED_TEXT=')(.*?)(')/).pop[1]
       encoding = 'UTF-8'
       translation.force_encoding(encoding).encode(encoding)

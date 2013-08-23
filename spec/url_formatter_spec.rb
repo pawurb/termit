@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Termislator::UrlFormatter do
-  describe "call method" do
+  describe "url method" do
     context "when voice flag is set to false" do
       it "returns correctly formatted url" do
         url_formatter = Termislator::UrlFormatter.new  source_lang: :en, target_lang: :fr, text: 'your mother', voice: false
