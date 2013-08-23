@@ -13,10 +13,8 @@ module Termislator
     end
 
     def translate
-      p @options
       response = Termislator::DataFetcher.new(@url, @options[:text]).data
-      handler = Termislator::HandlerFactory.new(voice: @options[:voice], response_body: response.body ).handler
-      handler.display
+      Termislator::HandlerFactory.new(voice: @options[:voice], data: response.body ).handler.display
     end
   end
 end

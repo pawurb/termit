@@ -1,12 +1,14 @@
 module Termislator
   class TextResponseHandler
-    def initialize response_body
-      @text = response_body
+    def initialize data
+      @text = data
     end
 
     def display
       p parsed_text
     end
+
+    private
 
     def parsed_text
       translation = @text.scan(/(TRANSLATED_TEXT=')(.*?)(')/).pop[1]

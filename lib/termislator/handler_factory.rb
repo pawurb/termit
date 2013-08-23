@@ -7,9 +7,9 @@ module Termislator
 
     def handler
       if @options[:voice]
-        Termislator::SoundResponseHandler.new(@options[:response_body])
+        Termislator::SoundResponseHandler.new(@options[:data])
       else
-        Termislator::TextResponseHandler.new(@options[:response_body])
+        Termislator::TextResponseHandler.new(@options[:data])
       end
     end
   end
