@@ -9,7 +9,7 @@ module Termislator
   class Translator
     def initialize options
       @options = options
-      @url = Termislator::UrlFormatter.new(options).url
+      @url = Termislator::UrlConstructor.new(options).url
     end
 
     def translate
