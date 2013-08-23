@@ -5,7 +5,7 @@ describe Termislator::TextResponseHandler do
     it "extracts and prints data from HTTP response" do
       response_body = File.open('spec/fixtures/text_response').read
       handler = Termislator::TextResponseHandler.new(response_body)
-      expect(handler.display).to eq('Twoja matka')
+      expect(handler.call).to eq('Twoja matka')
     end
   end
 end

@@ -14,7 +14,7 @@ module Termislator
 
     def translate
       response = Termislator::DataFetcher.new(@url, @options[:text]).data
-      Termislator::HandlerFactory.new(voice: @options[:voice], data: response.body ).handler.display
+      Termislator::HandlerFactory.new(voice: @options[:voice], data: response.body).handler.call
     end
   end
 end

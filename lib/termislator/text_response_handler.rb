@@ -4,7 +4,7 @@ module Termislator
       @text = data
     end
 
-    def display
+    def call
       p parsed_text
     end
 
