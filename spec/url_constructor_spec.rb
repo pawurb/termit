@@ -18,5 +18,4 @@ describe Termislator::UrlConstructor do
       end
     end
   end
-
 end

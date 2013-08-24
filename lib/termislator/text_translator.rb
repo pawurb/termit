@@ -1,8 +1,8 @@
 module Termislator
   class TextTranslator
     def initialize options
-      @options = options
-      @url = Termislator::UrlConstructor.new(options).url
+      @options = options.merge(voice: false)
+      @url = Termislator::UrlConstructor.new(@options).url
     end
 
     def translated_text
