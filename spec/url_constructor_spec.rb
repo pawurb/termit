@@ -12,8 +12,8 @@ describe Termislator::UrlConstructor do
 
     context "when voice flag is set to false" do
       it "returns correctly formatted url" do
-        url_formatter = Termislator::UrlConstructor.new  source_lang: :en, target_lang: :fr, text: 'your mother', voice: true
-        url = "http://translate.google.com/translate_tts?tl=fr&sl=en&ie=UTF-8&oe=UTF-8"
+        url_formatter = Termislator::UrlConstructor.new  target_lang: :fr, text: 'your mother', voice: true
+        url = "http://translate.google.com/translate_tts?tl=fr&ie=UTF-8&oe=UTF-8"
         expect(url_formatter.url).to eq(url)
       end
     end
