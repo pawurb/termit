@@ -15,7 +15,14 @@ module Termislator
     def translate
       text = Termislator::TextTranslator.new(@options).translated_text
       puts text
-      Termislator::SpeechSynthesizer.new(@options).call if @options[:voice]
+      speech_synthesis text if @options[:voice]
+    end
+
+    private
+
+    def speech_synthesis text
+      options = @options.merge(text: text)
+      Termislator::SpeechSynthesizer.new(options).call
     end
   end
 end
