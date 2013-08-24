@@ -3,7 +3,8 @@ require 'spec_helper'
 describe Termislator::SoundResponseHandler do
   describe "call method" do
     it "should save the sound file" do
-      File.should_receive(:open).with("sound_response.mpeg", "wb")
+      file_location = File.dirname(__FILE__)
+      File.should_receive(:open)
       Termislator::SoundResponseHandler.new(:response).call
     end
 

@@ -1,3 +1,5 @@
+require 'fileutils'
+
 module Termislator
   class SoundResponseHandler
     def initialize data
@@ -5,9 +7,18 @@ module Termislator
     end
 
     def call
-      File.open("sound_response.mpeg", "wb") do |file|
+      location = "#{File.expand_path('~')}/.termislator"
+      create_target_dir location
+      File.open("#{location}/sound_response.mpeg", "wb") do |file|
         file.write(@data)
       end
+      system "mpg123 -q #{location}/sound_response.mpeg"
+    end
+
+    private
+
+    def create_target_dir location
+      ::FileUtils.mkdir_p location unless File.directory?(location)
     end
   end
 end

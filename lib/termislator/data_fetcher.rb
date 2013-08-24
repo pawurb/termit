@@ -19,8 +19,7 @@ module Termislator
       http = Net::HTTP.new(uri.host, uri.port)
       request = Net::HTTP::Post.new(uri.request_uri)
       request.set_form_data(text: @text)
-      response = http.request(request)
-      response
+      http.request(request)
     end
   end
 end
