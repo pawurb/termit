@@ -59,7 +59,7 @@ Some of the language codes:
 * chinese - zh
 * russian - ru
 
-To find all available languages codes visit www.translate.google.com. Choosing langauges and their codes will appear in the url.
+To find all available languages codes visit www.translate.google.com. Choose langauges and their codes will appear in the url.
 
 
 
