@@ -1,4 +1,10 @@
+#Termislator
+
 Termislator is an easy way to use Google Translate in your terminal or any ruby program. It does not use paid Google Translate API but instead it simulates browser request to www.translate.google.com and parses the response.
+
+## Requirements
+
+Works with ruby 2.0.0 and 1.9.2.
 
 To use speech synthesis (yes it talks) you need to have mpg123 installed.
 
@@ -9,6 +15,8 @@ For Ubuntu:
 For MacOSX:
     
     brew install mpg123
+    
+## Usage
 
 You can use lib/termislator/execute.rb script like this:
 
