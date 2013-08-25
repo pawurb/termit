@@ -4,15 +4,15 @@ require 'spec_helper'
 describe Termislator::Main do
   describe "translate" do
     before do
-      text_translator = double 'fake_text_tranlsator', translated_text: :result
+      text_translator = double 'fake_text_tranlsator', call: nil, text: :result
       Termislator::TextTranslator.stub(:new) { text_translator }
     end
 
     context "voice flag is set to false" do
       it "executes only the TextTranslator" do
-        STDOUT.should_receive(:puts).with(:result)
+        Termislator::TextTranslator.should_receive(:new)
         Termislator::SpeechSynthesizer.should_not_receive(:new)
-        Termislator::Main.new(sl: :pl, tl: :en, text: 'cześć i czołem').translate
+        Termislator::Main.new(source_lang: :pl, target_lang: :en, text: 'cześć i czołem').translate
       end
     end
 
@@ -25,7 +25,7 @@ describe Termislator::Main do
       it "executes both TextTranslator and SpeechSynthesizer" do
         Termislator::TextTranslator.should_receive(:new)
         Termislator::SpeechSynthesizer.should_receive(:new)
-        Termislator::Main.new(sl: :pl, tl: :en, text: 'cześć i czołem', voice: true).translate
+        Termislator::Main.new(source_lang: :pl, target_lang: :en, text: 'cześć i czołem', voice: true).translate
       end
     end
   end
