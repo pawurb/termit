@@ -1,2 +1,8 @@
 require_relative 'termislator/user_input_parser'
 require_relative 'termislator/main'
+require_relative 'termislator/sound_response_handler'
+require_relative 'termislator/text_translator'
+require_relative 'termislator/speech_synthesizer'
+require_relative 'termislator/url_constructor'
+require_relative 'termislator/data_fetcher'
+require_relative 'termislator/text_response_handler'
