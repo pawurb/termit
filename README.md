@@ -34,7 +34,7 @@ Or you can use it as a gem in you application. Termislator::Main object expects 
 
 In your Gemfile:
 
-    gem 'termislator', :git => git@github.com:pawurb/termislator.git
+    gem 'termislator', git: 'git@github.com:pawurb/termislator.git'
 
 In your application:
 
