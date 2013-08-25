@@ -3,9 +3,11 @@ Termislator is an easy way to use Google Translate in your terminal or any ruby 
 To use speech synthesis you need to have mpg123 installed.
 
 For Ubuntu:
+    
     sudo apt-get install mpg123
 
 For MacOSX:
+    
     brew install mpg123
 
 You can use lib/termislator/execute.rb script like this:
