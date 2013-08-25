@@ -15,7 +15,7 @@ module Termislator
 
     def check_sound_player
       unless system 'which mpg123 > /dev/null'
-        raise "Termislator needs mpg123 installed"
+        raise "Termislator speech synthesis requires mpg123 installed"
       end
     end
   end
