@@ -21,14 +21,14 @@ You can use lib/termislator/execute.rb script like this:
     ruby execute.rb en zh 'hey cowboy where is your horse?'
     => "嘿，牛仔是你的马在哪里？"
 
-Or you can use it as a gem in you application. Termislator::Main object expects the following example options hash:
+Or you can use it as a gem in you application. Termislator::Main object expects the following example options hash as an initialization argument:
 
-  {
-    source_lang: :en, #input text language
-    target_lang: :pl, #language to be translated to
-    text: 'hey cowboy where is your horse?', #text to be translated
-    voice: true #speech synthesis
-  }
+    {
+      source_lang: :en, #input text language
+      target_lang: :pl, #language to be translated to
+      text: 'hey cowboy where is your horse?', #text to be translated
+      voice: true #speech synthesis
+    }
 
 In your Gemfile:
 
