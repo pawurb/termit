@@ -22,7 +22,7 @@ For MacOSX:
 
 You can use lib/termislator/execute.rb script like this:
 
-    ruby execute.rb pl fr 'hey cowboy where is your horse?'
+    ruby execute.rb en fr 'hey cowboy where is your horse?'
     => "hey cow-boy où est votre cheval?"
 
     ruby execute.rb en ru 'hey cowboy where is your horse?'
