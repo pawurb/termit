@@ -12,6 +12,7 @@ describe Termislator::SpeechSynthesizer do
     end
 
     it "executes correct service objects" do
+      Termislator::SpeechSynthesizer.any_instance.stub(:check_sound_player) { nil }
       Termislator::SoundResponseHandler.should_receive(:new).with(:binary_sound_file)
       Termislator::SpeechSynthesizer.new(target_lang: :en, text: 'your mother', voice: true).call
     end
