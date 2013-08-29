@@ -1,11 +1,11 @@
 #Termislator [![Build Status](https://travis-ci.org/pawurb/termislator.png)](https://travis-ci.org/pawurb/termislator)
 
 
-Termislator is an easy way to use Google Translate in your terminal or any ruby program. It does not use paid Google Translate API but instead it headlessly browses www.translate.google.com and parses the response.
+Termislator is an easy way to use Google Translate in your terminal. It does not use paid Google Translate API but instead it headlessly browses www.translate.google.com and parses the response.
 
 ## Requirements
 
-Works with Ruby 1.9.2 and up.
+Works with Ruby 1.9.2 and higher.
 
 To use speech synthesis (yes it talks) you need to have mpg123 installed.
 
@@ -19,13 +19,14 @@ For MacOSX:
 
 ## Usage
 
-### As a terminal executable
 ```ruby
 gem install termislator
 ```
 #### 'termis' command
 
 ```ruby
+termis 'source_language' 'target_language' 'text'
+
 termis en fr 'hey cowboy where is your horse?'
 => "hey cow-boy où est votre cheval?"
 
@@ -46,7 +47,7 @@ termis en zh 'hey cowboy where is your horse?' -v
 * spanish - es
 * chinese - zh
 * russian - ru
-* automatic input detection - auto
+* automatic source language detection - auto
 
 To find all available languages codes visit www.translate.google.com. Choose langauges and their codes will appear in the url.
 
