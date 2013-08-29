@@ -51,7 +51,7 @@ In your Gemfile:
     gem 'termislator'
 
 In your application:
-
+```
     require 'termislator'
 
     options =
@@ -63,6 +63,7 @@ In your application:
 
     Termislator::Main.new(options).translate
     => "Hey vaquero dónde está tu caballo?"
+```
 
 ## Language codes:
 * slovakian - sk
