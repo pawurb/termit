@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+
+$LOAD_PATH.unshift(File.dirname(__FILE__) + '/../lib') unless $LOAD_PATH.include?(File.dirname(__FILE__) + '/../lib')
+
+require 'termislator'
+
+input_parser = Termislator::UserInputParser.new(ARGV)
+
+options =
+  {
+    source_lang: :auto,
+    target_lang: :en,
+    voice: input_parser.voice_flag,
+    text: input_parser.user_input.join(' ')
+  }
+
+Termislator::Main.new(options).translate

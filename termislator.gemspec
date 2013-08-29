@@ -8,11 +8,11 @@ Gem::Specification.new do |gem|
   gem.version       = Termislator::VERSION
   gem.authors       = ["pawurb"]
   gem.email         = ["p.urbanek89@gmail.com"]
-  gem.summary   = %q{Google Translate in your terminal}
-  gem.description       = %q{ Termislator is an easy way to use all the Google Translate goodies straight from your terminal. }
+  gem.summary       = %q{Google Translate in your terminal}
+  gem.description   = %q{ Termislator is an easy way to use all the Google Translate goodies straight from your terminal. }
   gem.homepage      = "http://github.com/pawurb/termislator"
-  gem.files = `git ls-files`.split("\n")
-  gem.executables   = ['termislator']
+  gem.files         = `git ls-files`.split("\n")
+  gem.executables   = ['termis', 'tte']
   gem.test_files    = gem.files.grep(%r{^(spec)/})
   gem.require_paths = ["lib"]
   gem.license       = "MIT"

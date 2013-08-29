@@ -15,11 +15,15 @@ module Termislator
     private
 
     def construct_text_url
-      "http://translate.google.com/?tl=#{@options[:target_lang]}&sl=#{@options[:source_lang]}&ie=UTF-8&oe=UTF-8"
+      "#{host}/?tl=#{@options[:target_lang]}&sl=#{@options[:source_lang]}&ie=UTF-8&oe=UTF-8"
     end
 
     def construct_voice_url
-      "http://translate.google.com/translate_tts?tl=#{@options[:target_lang]}&ie=UTF-8&oe=UTF-8"
+      "#{host}/translate_tts?tl=#{@options[:target_lang]}&ie=UTF-8&oe=UTF-8"
+    end
+
+    def host
+      "http://translate.google.com"
     end
   end
 end
