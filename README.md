@@ -6,7 +6,7 @@ Termislator is an easy way to use Google Translate in your terminal or any ruby 
 
 ## Requirements
 
-Works with Ruby 2.0.0 and 1.9.2.
+Works with Ruby 2.0.0, 1.9.3 and 1.9.2.
 
 To use speech synthesis (yes it talks) you need to have mpg123 installed.
 
@@ -20,11 +20,9 @@ For MacOSX:
     
 ## Usage
 
-### As a terminal script
+### As a terminal executable script
 
     gem install termislator
-
-You can use lib/termislator/execute.rb script like this:
 
     termislator en fr 'hey cowboy where is your horse?'
     => "hey cow-boy où est votre cheval?"
@@ -77,6 +75,9 @@ In your application:
 
 To find all available languages codes visit www.translate.google.com. Choose langauges and their codes will appear in the url.
 
+## Status
+
+Project is in 'but it works on my machine...' development state. Any feedback will be appreciated.
 
 
 
