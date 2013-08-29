@@ -19,11 +19,11 @@ For MacOSX:
     
 ## Usage
 
-### As a terminal executable script
+### As a terminal executable
 ```ruby
 gem install termislator
 ```
-#### termis
+#### 'termis' command
 
 ```ruby
 termis en fr 'hey cowboy where is your horse?'
@@ -32,13 +32,13 @@ termis en fr 'hey cowboy where is your horse?'
 termis en ru 'hey cowboy where is your horse?'
 => "Эй ковбой где твоя лошадь?"
 ```
-Specify a -v (voice) flag to use speech synthesis:
+Specify a **-v** (voice) flag to use speech synthesis:
 ``` ruby
 termis en zh 'hey cowboy where is your horse?' -v
 => "嘿，牛仔是你的马在哪里？" #and a nice chinese girl voice says something about a horse
 ```
 
-#### tte - alias
+#### 'tte' command
 
 Shortcut for Translate To English. Automagically detects input language and translates text to english
 ``` ruby
@@ -48,15 +48,7 @@ tte qui est votre papa ?
 
 ### In any Ruby program
 
-You can use it as a gem in you application. Termislator::Main object expects the following example options hash as an initialization argument:
-``` ruby
-{
-  source_lang: :en, #input text language
-  target_lang: :pl, #language to be translated to
-  text: 'hey cowboy where is your horse?', #text to be translated
-  voice: true #speech synthesis
-}
-```
+You can use it as a gem in your application. Termislator::Main object expects the options hash as an initialization argument:
 
 In your Gemfile:
 
@@ -68,9 +60,10 @@ require 'termislator'
 
 options =
 {
-  source_lang: :en,
-  target_lang: :es,
-  text: 'hey cowboy where is your horse?'
+  source_lang: :en, #input text language
+  target_lang: :es, #language to be translated to
+  text: 'hey cowboy where is your horse?', #text to be translated
+  voice: false #speech synthesis
 }
 
 Termislator::Main.new(options).translate
@@ -91,7 +84,7 @@ To find all available languages codes visit www.translate.google.com. Choose lan
 
 ## Status
 
-Project is in 'but it works on my machine...' development state. Any feedback will be appreciated.
+Project is in 'but it works on my machine...' development phase. Any feedback will be appreciated.
 
 
 
