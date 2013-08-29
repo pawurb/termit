@@ -33,7 +33,7 @@ termislator en ru 'hey cowboy where is your horse?'
 Specify a -v (voice) flag to use speech synthesis:
 ``` ruby
 termislator en zh 'hey cowboy where is your horse?' -v
-=> "嘿，牛仔是你的马在哪里？" and a nice chinese girl voice says something about a horse
+=> "嘿，牛仔是你的马在哪里？" #and a nice chinese girl voice says something about a horse
 ```
 ### In any Ruby program
 
