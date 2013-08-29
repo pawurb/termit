@@ -5,5 +5,20 @@ $LOAD_PATH.unshift(File.dirname(__FILE__) + '/../lib') unless $LOAD_PATH.include
 
 require 'termislator'
 
-options = Termislator::UserInputParser.new(ARGV).options
-Termislator::Main.new(options).translate
+if ARGV.empty?
+  puts ""
+  puts "=========TERMISLATOR========="
+  puts "USAGE:"
+  puts "termis 'source_language' 'target_language' 'text'"
+  puts ""
+  puts 'Example:'
+  puts "termis en fr 'hey cowboy where is your horse?'"
+  puts "=> 'hey cow-boy ou est votre cheval?'"
+  puts ""
+  puts "Check docs at: github.com/pawurb/termislator "
+  puts ""
+else
+  options = Termislator::UserInputParser.new(ARGV).options
+  Termislator::Main.new(options).translate
+end
+

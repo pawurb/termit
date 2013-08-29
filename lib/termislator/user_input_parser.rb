@@ -10,7 +10,7 @@ module Termislator
       validate_user_input parsed
       parsed
     rescue ArgumentError, NoMethodError
-      puts "TERMISLATOR: Wrong data. Example 'termis pl en morowy => pestiferous'"
+      puts "TERMISLATOR: Wrong data. Example: 'termis pl en morowy' => pestiferous"
       exit
     end
 

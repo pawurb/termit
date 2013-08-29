@@ -19,20 +19,21 @@ For MacOSX:
 
 ## Usage
 
-```ruby
-gem install termislator
-```
-#### 'termis' command
-
-```ruby
 termis 'source_language' 'target_language' 'text'
 
-termis en fr 'hey cowboy where is your horse?'
-=> "hey cow-boy où est votre cheval?"
+Example:
 
-termis en ru 'hey cowboy where is your horse?'
-=> "Эй ковбой где твоя лошадь?"
+```ruby
+gem install termislator
+
+termis en es 'hey cowboy where is your horse?'
+=> "Hey vaquero dónde está tu caballo?"
+
+termis fr en "qui est votre papa?"
+=> "Who's Your Daddy?"
 ```
+#### Speech synthesis
+
 Specify a **-v** (voice) flag to use speech synthesis:
 ``` ruby
 termis en zh 'hey cowboy where is your horse?' -v
@@ -49,7 +50,7 @@ termis en zh 'hey cowboy where is your horse?' -v
 * russian - ru
 * automatic source language detection - auto
 
-To find all available languages codes visit www.translate.google.com. Choose langauges and their codes will appear in the url.
+To find all available language codes visit www.translate.google.com. Choose langauges and their codes will appear in the url.
 
 ## Status
 
