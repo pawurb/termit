@@ -12,7 +12,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{ Termislator is an easy way to use all the Google Translate goodies straight from your terminal. }
   gem.homepage      = "http://github.com/pawurb/termislator"
   gem.files         = `git ls-files`.split("\n")
-  gem.executables   = ['termis', 'tte']
+  gem.executables   = ['termis']
   gem.test_files    = gem.files.grep(%r{^(spec)/})
   gem.require_paths = ["lib"]
   gem.license       = "MIT"
