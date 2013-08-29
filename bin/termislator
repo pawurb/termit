@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'termislator'
-puts 1
+
+options = Termislator::UserInputParser.new(ARGV).options
+Termislator::Main.new(options).translate

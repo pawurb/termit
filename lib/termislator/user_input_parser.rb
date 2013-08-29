@@ -23,6 +23,8 @@ module Termislator
        target_lang: @user_input.shift.to_sym,
        text: @user_input.join(' ')
       }
+      rescue ArgumentError
+        puts "Wrong data. Ex. termislator en pl weeds => 'chwasty'"
     end
 
     def set_voice_flag
