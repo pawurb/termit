@@ -1,4 +1,6 @@
-#Termislator
+#Termislator [![Build Status](https://travis-ci.org/pawurb/termislator.png)](https://travis-ci.org/pawurb/termislator)
+
+
 
 Termislator is an easy way to use Google Translate in your terminal or any ruby program. It does not use paid Google Translate API but instead it simulates browser request to www.translate.google.com and parses the response.
 
