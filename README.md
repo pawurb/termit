@@ -27,17 +27,23 @@ Example:
 ```ruby
 gem install termislator
 
-termis en es 'hey cowboy where is your horse?'
+termis en es "hey cowboy where is your horse?"
 => "Hey vaquero dónde está tu caballo?"
 
 termis fr en "qui est votre papa?"
 => "Who's Your Daddy?"
 ```
+
+Parenthesis are not necessary for text data input:
+```ruby
+termis fr ru qui est votre papa?
+=> "Кто твой папочка?"
+```
 #### Speech synthesis
 
 Specify a **-v** (voice) flag to use speech synthesis:
 ``` ruby
-termis en zh 'hey cowboy where is your horse?' -v
+termis en zh "hey cowboy where is your horse?" -v
 => "嘿，牛仔是你的马在哪里？" #and a nice chinese girl voice says something about a horse
 ```
 
@@ -55,7 +61,7 @@ To find all available language codes visit www.translate.google.com. Choose lang
 
 ## Status
 
-Project is in 'but it works on my machine...' development phase. Any feedback will be appreciated. Contact me on: p.urbanek89@gmail.com
+Project is in 'but it works on my machine...' development phase. Any feedback will be appreciated. You can contact me on: p.urbanek89@gmail.com
 
 
 
