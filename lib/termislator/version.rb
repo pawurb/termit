@@ -1,3 +1,3 @@
 module Termislator
-  VERSION = "1.1.0alpha"
+  VERSION = "1.1.0.alpha"
 end
