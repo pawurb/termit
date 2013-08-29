@@ -1,8 +1,5 @@
 module Termislator
   class UserInputParser
-
-    attr_reader :user_input
-
     def initialize user_input
       raise ArgumentError unless user_input.is_a? Array
       @user_input = user_input
@@ -17,10 +14,6 @@ module Termislator
       exit
     end
 
-    def voice_flag
-      flag_index = @user_input.index('-v')
-      flag_index ? !!@user_input.delete_at(flag_index) : false
-    end
 
     private
 
@@ -31,6 +24,11 @@ module Termislator
        target_lang: @user_input.shift.to_sym,
        text: @user_input.join(' ')
       }
+    end
+
+    def voice_flag
+      flag_index = @user_input.index('-v')
+      flag_index ? !!@user_input.delete_at(flag_index) : false
     end
 
     def validate_user_input hash
