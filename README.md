@@ -2,7 +2,7 @@
 
 
 
-Termislator is an easy way to use Google Translate in your terminal or any ruby program. It does not use paid Google Translate API but instead it simulates browser request to www.translate.google.com and parses the response.
+Termislator is an easy way to use Google Translate in your terminal or any ruby program. It does not use paid Google Translate API but instead it headlessly browses www.translate.google.com and parses the response.
 
 ## Requirements
 
