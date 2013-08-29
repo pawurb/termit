@@ -15,6 +15,7 @@ Gem::Specification.new do |gem|
   gem.executables   = ['termislator']
   gem.test_files    = gem.files.grep(%r{^(spec)/})
   gem.require_paths = ["lib"]
+  gem.license       = "MIT"
   gem.add_development_dependency "rspec", '~> 2.14.1'
   gem.add_development_dependency "vcr", '~> 2.5.0'
   gem.add_development_dependency "webmock", '~> 1.12.0'
