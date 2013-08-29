@@ -11,7 +11,7 @@ describe Termislator::UserInputParser do
     context "when user has not given any arguments" do
       it "raises error" do
         parser = Termislator::UserInputParser.new []
-        expect{ parser.options }.to raise_error ArgumentError
+        expect{ parser.options }.to raise_error SystemExit
       end
     end
 
@@ -33,7 +33,7 @@ describe Termislator::UserInputParser do
 
       it "with incorrect language options format raiser error" do
         parser = Termislator::UserInputParser.new ['anglicki', 'po polski', 'your mother', '-v']
-        expect{ parser.options }.to raise_error ArgumentError
+        expect{ parser.options }.to raise_error SystemExit
       end
     end
 
