@@ -10,8 +10,9 @@ module Termislator
       parsed = parse_input
       validate_user_input parsed
       parsed
-    rescue Exception => err
-      raise ArgumentError, "Wrong data: #{err.message}"
+    rescue Exception
+      puts "TERMISLATOR: Wrong data. Example 'termislator pl en morowy => pestiferous'"
+      exit
     end
 
     private
@@ -23,8 +24,6 @@ module Termislator
        target_lang: @user_input.shift.to_sym,
        text: @user_input.join(' ')
       }
-      rescue ArgumentError
-        puts "Wrong data. Ex. termislator en pl weeds => 'chwasty'"
     end
 
     def set_voice_flag

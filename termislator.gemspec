@@ -11,8 +11,8 @@ Gem::Specification.new do |gem|
   gem.summary   = %q{Google Translate in your terminal}
   gem.description       = %q{ Termislator is an easy way to use all the Google Translate goodies straight from your terminal. }
   gem.homepage      = "http://github.com/pawurb/termislator"
-  gem.files         = `git ls-files`.split($/)
-  gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  gem.files         = `ls`.split($/)
+  gem.executables   = ['termislator']
   gem.test_files    = gem.files.grep(%r{^(spec)/})
   gem.require_paths = ["lib"]
   gem.add_development_dependency "rspec", '~> 2.14.1'
