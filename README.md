@@ -21,7 +21,7 @@ For MacOSX:
 ## Usage
 
 ### As a terminal executable script
-
+```ruby
     gem install termislator
 
     termislator en fr 'hey cowboy where is your horse?'
@@ -29,29 +29,30 @@ For MacOSX:
 
     termislator en ru 'hey cowboy where is your horse?'
     => "Эй ковбой где твоя лошадь?"
-    
+```
 Specify a -v (voice) flag to use speech synthesis:
-
+``` ruby
     termislator en zh 'hey cowboy where is your horse?' -v
     => "嘿，牛仔是你的马在哪里？" and a nice chinese girl voice says something about a horse
-    
+```
 ### In any Ruby program
 
 You can use it as a gem in you application. Termislator::Main object expects the following example options hash as an initialization argument:
-
+``` ruby
     {
       source_lang: :en, #input text language
       target_lang: :pl, #language to be translated to
       text: 'hey cowboy where is your horse?', #text to be translated
       voice: true #speech synthesis
     }
+```
 
 In your Gemfile:
 
     gem 'termislator'
 
 In your application:
-```
+``` ruby
     require 'termislator'
 
     options =
