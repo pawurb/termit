@@ -18,8 +18,9 @@ For MacOSX:
     brew install mpg123
 
 ## Usage
-
+```ruby
 termis 'source_language' 'target_language' 'text'
+```
 
 Example:
 
@@ -54,7 +55,7 @@ To find all available language codes visit www.translate.google.com. Choose lang
 
 ## Status
 
-Project is in 'but it works on my machine...' development phase. Any feedback will be appreciated.
+Project is in 'but it works on my machine...' development phase. Any feedback will be appreciated. Contact me on: p.urbanek89@gmail.com
 
 
 
