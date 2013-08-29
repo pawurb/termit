@@ -22,17 +22,19 @@ For MacOSX:
 
 ### As a terminal script
 
+    gem install termislator
+
 You can use lib/termislator/execute.rb script like this:
 
-    ruby execute.rb en fr 'hey cowboy where is your horse?'
+    termislator en fr 'hey cowboy where is your horse?'
     => "hey cow-boy où est votre cheval?"
 
-    ruby execute.rb en ru 'hey cowboy where is your horse?'
+    termislator en ru 'hey cowboy where is your horse?'
     => "Эй ковбой где твоя лошадь?"
     
 Specify a -v (voice) flag to use speech synthesis:
 
-    ruby execute.rb en zh 'hey cowboy where is your horse?' -v
+    termislator en zh 'hey cowboy where is your horse?' -v
     => "嘿，牛仔是你的马在哪里？" and a nice chinese girl voice says something about a horse
     
 ### In any Ruby program
@@ -48,7 +50,7 @@ You can use it as a gem in you application. Termislator::Main object expects the
 
 In your Gemfile:
 
-    gem 'termislator', git: 'git@github.com:pawurb/termislator.git'
+    gem 'termislator'
 
 In your application:
 
