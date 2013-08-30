@@ -48,11 +48,11 @@ termit en zh "hey cowboy where is your horse?" -v
 ```
 
 ## Language codes:
-* slovakian - sk
-* english -en
+* english - en
 * polish - pl
 * french - fr
 * spanish - es
+* slovakian - sk
 * chinese - zh
 * russian - ru
 * automatic source language detection - auto
@@ -61,7 +61,7 @@ To find all available language codes visit www.translate.google.com. Choose lang
 
 ## Status
 
-Project is in 'but it works on my machine...' development phase. Any feedback will be appreciated. You can contact me on: p.urbanek89@gmail.com
+Project is in "but it works on my machine..." development phase. Any feedback will be appreciated. You can contact me on: p.urbanek89@gmail.com
 
 
 
