@@ -3,7 +3,7 @@ require 'bundler/setup'
 require 'vcr'
 require 'webmock/rspec'
 
-require_relative '../lib/termislator'
+require_relative '../lib/termit'
 
 RSpec.configure do |config|
   # some (optional) config here

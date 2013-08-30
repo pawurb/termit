@@ -1,4 +1,4 @@
-module Termislator
+module Termit
   class UrlConstructor
     def initialize options
       @options = options

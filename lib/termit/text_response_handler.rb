@@ -1,4 +1,4 @@
-module Termislator
+module Termit
   class TextResponseHandler
     def initialize text
       @text = text

@@ -1,7 +1,7 @@
 require 'net/http'
 require 'uri'
 
-module Termislator
+module Termit
   class DataFetcher
     def initialize url, text
       @url = url

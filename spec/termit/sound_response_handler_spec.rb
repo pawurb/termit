@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Termislator::SoundResponseHandler do
+describe Termit::SoundResponseHandler do
   describe "call method" do
     it "should save the sound file" do
     end

@@ -1,4 +1,4 @@
-module Termislator
+module Termit
   class UserInputParser
     def initialize user_input
       raise ArgumentError unless user_input.is_a? Array
@@ -10,7 +10,7 @@ module Termislator
       validate_user_input parsed
       parsed
     rescue ArgumentError, NoMethodError
-      puts "TERMISLATOR: Wrong data. Example: 'termis pl en morowy' => pestiferous"
+      puts "Termit: Wrong data. Example: 'termis pl en morowy' => pestiferous"
       exit
     end
 

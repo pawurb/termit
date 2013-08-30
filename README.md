@@ -1,7 +1,7 @@
-#Termislator [![Build Status](https://travis-ci.org/pawurb/termislator.png)](https://travis-ci.org/pawurb/termislator)
+#Termit [![Build Status](https://travis-ci.org/pawurb/termit.png)](https://travis-ci.org/pawurb/termit)
 
 
-Termislator is an easy way to use Google Translate in your terminal. It does not use paid Google Translate API but instead it headlessly browses www.translate.google.com and parses the response.
+Termit is an easy way to use Google Translate in your terminal. It does not use paid Google Translate API but instead it headlessly browses www.translate.google.com and parses the response.
 
 ## Requirements
 
@@ -19,31 +19,31 @@ For MacOSX:
 
 ## Usage
 ```ruby
-termis 'source_language' 'target_language' 'text'
+termit 'source_language' 'target_language' 'text'
 ```
 
 Example:
 
 ```ruby
-gem install termislator
+gem install termit
 
-termis en es "hey cowboy where is your horse?"
+termit en es "hey cowboy where is your horse?"
 => "Hey vaquero dónde está tu caballo?"
 
-termis fr en "qui est votre papa?"
+termit fr en "qui est votre papa?"
 => "Who's Your Daddy?"
 ```
 
 Parenthesis are not necessary for text data input:
 ```ruby
-termis fr ru qui est votre papa?
+termit fr ru qui est votre papa?
 => "Кто твой папочка?"
 ```
 #### Speech synthesis
 
 Specify a **-v** (voice) flag to use speech synthesis:
 ``` ruby
-termis en zh "hey cowboy where is your horse?" -v
+termit en zh "hey cowboy where is your horse?" -v
 => "嘿，牛仔是你的马在哪里？" #and a nice chinese girl voice says something about a horse
 ```
 

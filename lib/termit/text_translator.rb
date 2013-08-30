@@ -1,16 +1,16 @@
-module Termislator
+module Termit
   class TextTranslator
     attr_reader :text
 
     def initialize options
       @options = options.merge(voice: false)
-      @url = Termislator::UrlConstructor.new(@options).url
+      @url = Termit::UrlConstructor.new(@options).url
     end
 
     def call
-      response = Termislator::DataFetcher.new(@url, @options[:text]).data
+      response = Termit::DataFetcher.new(@url, @options[:text]).data
       print_info
-      @text = Termislator::TextResponseHandler.new(response.body).call
+      @text = Termit::TextResponseHandler.new(response.body).call
     end
 
     def print_info

@@ -3,22 +3,22 @@ require 'rubygems'
 
 $LOAD_PATH.unshift(File.dirname(__FILE__) + '/../lib') unless $LOAD_PATH.include?(File.dirname(__FILE__) + '/../lib')
 
-require 'termislator'
+require 'termit'
 
 if ARGV.empty?
   puts ""
-  puts "=========TERMISLATOR========="
+  puts "=========Termit========="
   puts "USAGE:"
-  puts "termis 'source_language' 'target_language' 'text'"
+  puts "termit 'source_language' 'target_language' 'text'"
   puts ""
   puts 'Example:'
-  puts "termis en fr 'hey cowboy where is your horse?'"
+  puts "termit en fr 'hey cowboy where is your horse?'"
   puts "=> 'hey cow-boy ou est votre cheval?'"
   puts ""
-  puts "Check docs at: github.com/pawurb/termislator "
+  puts "Check docs at: github.com/pawurb/termit "
   puts ""
 else
-  options = Termislator::UserInputParser.new(ARGV).options
-  Termislator::Main.new(options).translate
+  options = Termit::UserInputParser.new(ARGV).options
+  Termit::Main.new(options).translate
 end
 

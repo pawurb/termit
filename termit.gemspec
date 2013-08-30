@@ -1,18 +1,18 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'termislator/version'
+require 'termit/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "termislator"
-  gem.version       = Termislator::VERSION
+  gem.name          = "Termit"
+  gem.version       = Termit::VERSION
   gem.authors       = ["pawurb"]
   gem.email         = ["p.urbanek89@gmail.com"]
   gem.summary       = %q{Google Translate in your terminal}
-  gem.description   = %q{ Termislator is an easy way to use all the Google Translate goodies straight from your terminal. }
-  gem.homepage      = "http://github.com/pawurb/termislator"
+  gem.description   = %q{ Termit is an easy way to use all the Google Translate goodies straight from your terminal. }
+  gem.homepage      = "http://github.com/pawurb/termit"
   gem.files         = `git ls-files`.split("\n")
-  gem.executables   = ['termis']
+  gem.executables   = ['termit']
   gem.test_files    = gem.files.grep(%r{^(spec)/})
   gem.require_paths = ["lib"]
   gem.license       = "MIT"
