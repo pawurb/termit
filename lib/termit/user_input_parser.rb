@@ -10,7 +10,7 @@ module Termit
       validate_user_input parsed
       parsed
     rescue ArgumentError, NoMethodError
-      puts "Termit: Wrong data. Example: 'termis pl en morowy' => pestiferous"
+      puts "TERMIT: Wrong data. Example: 'termit pl en morowy' => pestiferous"
       exit
     end
 
