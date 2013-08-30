@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'termit/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "Termit"
+  gem.name          = "termit"
   gem.version       = Termit::VERSION
   gem.authors       = ["pawurb"]
   gem.email         = ["p.urbanek89@gmail.com"]
