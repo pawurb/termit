@@ -3,19 +3,10 @@
 
 Termit is an easy way to use Google Translate in your terminal. It does not use paid Google Translate API but instead it headlessly browses www.translate.google.com and parses the response.
 
-## Requirements
-
-Works with Ruby 1.9.2 and higher.
-
-To use speech synthesis (yes it talks) you need to have mpg123 installed.
-
-For Ubuntu:
-
-    sudo apt-get install mpg123
-
-For MacOSX:
-
-    brew install mpg123
+## Installation
+```ruby
+gem install termit
+```
 
 ## Usage
 ```ruby
@@ -25,7 +16,6 @@ termit 'source_language' 'target_language' 'text'
 Example:
 
 ```ruby
-gem install termit
 
 termit en es "hey cowboy where is your horse?"
 => "Hey vaquero dónde está tu caballo?"
@@ -58,6 +48,20 @@ termit en zh "hey cowboy where is your horse?" -v
 * automatic source language detection - auto
 
 To find all available language codes visit www.translate.google.com. Choose langauges and their codes will appear in the url.
+
+## Requirements
+
+Works with Ruby 1.9.2 and higher.
+
+To use speech synthesis (yes it talks) you need to have mpg123 installed.
+
+For Ubuntu:
+
+    sudo apt-get install mpg123
+
+For MacOSX:
+
+    brew install mpg123
 
 ## Status
 
