@@ -5,20 +5,8 @@ $LOAD_PATH.unshift(File.dirname(__FILE__) + '/../lib') unless $LOAD_PATH.include
 
 require 'termit'
 
-if ARGV.empty?
-  puts ""
-  puts "=========Termit========="
-  puts "USAGE:"
-  puts "termit 'source_language' 'target_language' 'text'"
-  puts ""
-  puts 'Example:'
-  puts "termit en fr 'hey cowboy where is your horse?'"
-  puts "=> 'hey cow-boy ou est votre cheval?'"
-  puts ""
-  puts "Check docs at: github.com/pawurb/termit "
-  puts ""
-else
-  options = Termit::UserInputParser.new(ARGV).options
-  Termit::Main.new(options).translate
-end
+
+options = Termit::UserInputParser.new(ARGV).options
+Termit::Main.new(options).translate
+
 

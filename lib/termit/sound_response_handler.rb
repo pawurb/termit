@@ -7,7 +7,7 @@ module Termit
     end
 
     def call
-      location = "#{File.expand_path('~')}/.Termit"
+      location = "#{File.expand_path('~')}/.termit"
       create_target_dir location
       File.open("#{location}/sound_response.mpeg", "wb") do |file|
         file.write(@data)
