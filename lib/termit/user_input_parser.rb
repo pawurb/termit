@@ -12,7 +12,7 @@ module Termit
       validate_langauge_codes parsed
       parsed
     rescue ArgumentError, NoMethodError
-      puts "TERMIT: Wrong data. Example: 'termit pl en morowy' => pestiferous"
+      puts "TERMIT: Wrong data. Example: 'termit en es the cowboy ' => 'el vaquero"
       exit
     end
 

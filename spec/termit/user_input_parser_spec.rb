@@ -23,7 +23,6 @@ describe Termit::UserInputParser do
 
       it "with the -v (version) flag it exit the program and displays version number" do
         expect { Termit::UserInputParser.new ['-v'] }.to raise_error SystemExit
-        #moze ze stdout should receive test...
       end
 
       it "with the -h (help) flag it exit the program and displays help" do
@@ -32,22 +31,22 @@ describe Termit::UserInputParser do
 
 
       it "with -s (synonims) flag" do
-        parser = Termit::UserInputParser.new ['en', 'fr', 'your mother', '-s']
-        expect(parser.options).to eq({ source_lang: :en, target_lang: :fr, text: 'your mother', talk: false, synonyms: true })
+        parser = Termit::UserInputParser.new ['en', 'fr', 'hey cowboy!', '-s']
+        expect(parser.options).to eq({ source_lang: :en, target_lang: :fr, text: 'hey cowboy!', talk: false, synonyms: true })
       end
 
       it "with -t (talk) flag" do
-        parser = Termit::UserInputParser.new ['en', 'fr', 'your mother', '-t']
-        expect(parser.options).to eq({ source_lang: :en, target_lang: :fr, text: 'your mother', talk: true, synonyms: false })
+        parser = Termit::UserInputParser.new ['en', 'fr', 'hey cowboy!', '-t']
+        expect(parser.options).to eq({ source_lang: :en, target_lang: :fr, text: 'hey cowboy!', talk: true, synonyms: false })
       end
 
       it "with text as seperate ARGV array elements" do
-        parser = Termit::UserInputParser.new ['en', 'fr', 'your', 'mother', 'here?', '-t']
-        expect(parser.options).to eq({ source_lang: :en, target_lang: :fr, text: 'your mother here?', talk: true, synonyms: false })
+        parser = Termit::UserInputParser.new ['en', 'fr', 'is', 'cowboy', 'here ?', '-t']
+        expect(parser.options).to eq({ source_lang: :en, target_lang: :fr, text: 'is cowboy here ?', talk: true, synonyms: false })
       end
 
       it "with incorrect language options format raiser error" do
-        parser = Termit::UserInputParser.new ['anglicki', 'po polski', 'your mother', '-t']
+        parser = Termit::UserInputParser.new ['ang', 'po polski', 'hey cowboy!', '-t']
         expect{ parser.options }.to raise_error SystemExit
       end
 
