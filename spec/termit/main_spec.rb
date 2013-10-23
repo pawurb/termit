@@ -8,7 +8,7 @@ describe Termit::Main do
       Termit::TextTranslator.stub(:new) { text_translator }
     end
 
-    context "voice flag is set to false" do
+    context "talk flag is set to false" do
       it "executes only the TextTranslator" do
         Termit::TextTranslator.should_receive(:new)
         Termit::SpeechSynthesizer.should_not_receive(:new)
@@ -25,7 +25,7 @@ describe Termit::Main do
       it "executes both TextTranslator and SpeechSynthesizer" do
         Termit::TextTranslator.should_receive(:new)
         Termit::SpeechSynthesizer.should_receive(:new)
-        Termit::Main.new(source_lang: :pl, target_lang: :en, text: 'cześć i czołem', voice: true).translate
+        Termit::Main.new(source_lang: :pl, target_lang: :en, text: 'cześć i czołem', talk: true).translate
       end
     end
   end

@@ -9,7 +9,7 @@ module Termit
     def call
       translation = extract_translation
       puts translation
-      puts extract_synonyms if @extract_synonyms
+      puts 'Synonyms:', extract_synonyms if @extract_synonyms
       translation
     end
 
@@ -22,7 +22,7 @@ module Termit
     def extract_synonyms
       synonyms_data = @text.split("[[")[2].split("[")[1]
       length = synonyms_data.length
-      synonyms_data[0..(length-3)]
+      synonyms_data[0] == '4' ? "---" : synonyms_data[0..(length-3)]
     end
 
     def decode text

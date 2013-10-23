@@ -10,8 +10,7 @@ describe Termit::UserInputParser do
   describe "options method" do
     context "when user has not given any arguments" do
       it "raises error" do
-        parser = Termit::UserInputParser.new []
-        expect{ parser.options }.to raise_error SystemExit
+        expect{ Termit::UserInputParser.new [] }.to raise_error SystemExit
       end
     end
 

@@ -2,7 +2,7 @@ module Termit
   class UserInputParser
     def initialize user_input
       raise ArgumentError unless user_input.is_a? Array
-      display_help_info if user_input.index("-h")
+      display_help_info if user_input.index("-h") || user_input.empty?
       display_version_number if user_input.index("-v")
       @user_input = user_input
     end

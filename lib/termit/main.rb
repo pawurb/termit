@@ -7,7 +7,7 @@ module Termit
     def translate
       text_translator = Termit::TextTranslator.new(@options)
       text_translator.call
-      speech_synthesis text_translator.text if @options[:voice]
+      speech_synthesis text_translator.text if @options[:talk]
     end
 
     private
