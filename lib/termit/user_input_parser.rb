@@ -1,5 +1,9 @@
 module Termit
   class UserInputParser
+    extend ::Delegation
+    @output_manager = Termit::OutputManager.new
+
+    delegate :display_error_info_and_quit, :display_help_and_quit, :display_version_and_quit, to: @output_manager
     def initialize user_input
       @user_input = user_input
       display_help_and_quit if @user_input.index("-h") || @user_input.empty?
@@ -12,7 +16,6 @@ module Termit
     rescue ArgumentError
       display_error_info_and_quit
     end
-
 
     private
 
@@ -35,19 +38,6 @@ module Termit
       raise ArgumentError unless @user_input.is_a? Array
       [0, 1].each do |index|
         raise ArgumentError unless [2, 4].include?(@user_input[index].length)
-      end
-    end
-
-    def output_manager
-      Termit::OutputManager.new
-    end
-
-    #delegating to OutputManager
-    def method_missing(method, *args, &block)
-      if output_manager.respond_to?(method)
-        output_manager.send(method, *args, &block)
-      else
-        raise NoMethodError
       end
     end
   end

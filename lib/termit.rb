@@ -1,3 +1,5 @@
+require 'termit/modules/delegation'
+require 'termit/output_manager'
 require 'termit/user_input_parser'
 require 'termit/main'
 require 'termit/sound_response_handler'
@@ -6,7 +8,6 @@ require 'termit/speech_synthesizer'
 require 'termit/url_constructor'
 require 'termit/data_fetcher'
 require 'termit/text_response_handler'
-require 'termit/output_manager'
 
 module Termit
 end

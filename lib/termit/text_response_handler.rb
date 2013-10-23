@@ -1,4 +1,3 @@
-require 'json'
 module Termit
   class TextResponseHandler
     def initialize text, synonyms
