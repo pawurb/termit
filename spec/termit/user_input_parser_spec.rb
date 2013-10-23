@@ -1,12 +1,6 @@
 require 'spec_helper'
 
 describe Termit::UserInputParser do
-  describe "initialization" do
-    it "raises error if argument is not a ARGV options array" do
-      expect { Termit::UserInputParser.new :wrong_data }.to raise_error ArgumentError
-    end
-  end
-
   describe "options method" do
     context "when user has not given any arguments" do
       it "raises error" do
@@ -45,8 +39,7 @@ describe Termit::UserInputParser do
       end
 
       it "with incorrect language options format raiser error" do
-        parser = Termit::UserInputParser.new ['ang', 'po polski', 'hey cowboy!', '-t']
-        expect{ parser.options }.to raise_error SystemExit
+        expect{ Termit::UserInputParser.new ['ang', 'po polski', 'hey cowboy!', '-t'] }.to raise_error ArgumentError
       end
 
     end

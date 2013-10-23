@@ -22,7 +22,8 @@ describe Termit::TextResponseHandler do
 
       it "extracts data from HTTP response body" do
         expect(STDOUT).to receive(:puts).with("tyłek")
-        expect(STDOUT).to receive(:puts).with("Synonyms:", "\"osioł\",\"tyłek\",\"dupa\",\"zadek\"")
+        expect(STDOUT).to receive(:puts).with("")
+        expect(STDOUT).to receive(:puts).with("Synonyms:", "osioł, tyłek, dupa, zadek")
         handler.call
       end
     end

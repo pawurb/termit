@@ -1,17 +1,15 @@
 module Termit
   class UserInputParser
     def initialize user_input
-      raise ArgumentError unless user_input.is_a? Array
-      display_help_info if user_input.index("-h") || user_input.empty?
-      display_version_number if user_input.index("-v")
       @user_input = user_input
+      show_help_and_quit if @user_input.index("-h") || @user_input.empty?
+      show_version_and_quit if @user_input.index("-v")
+      validate_user_input
     end
 
     def options
-      parsed = parse_input
-      validate_langauge_codes parsed
-      parsed
-    rescue ArgumentError, NoMethodError
+      parse_input
+    rescue ArgumentError
       puts "TERMIT: Wrong data. Example: 'termit en es the cowboy ' => 'el vaquero"
       exit
     end
@@ -20,7 +18,7 @@ module Termit
     private
 
     def parse_input
-      parsed = {
+      {
        talk: extract_flag('t'),
        synonyms: extract_flag('s'),
        source_lang: @user_input.shift.to_sym,
@@ -34,13 +32,14 @@ module Termit
       flag_index ? !!@user_input.delete_at(flag_index) : false
     end
 
-    def validate_langauge_codes hash
-      [:source_lang, :target_lang].each do |key|
-        raise ArgumentError unless [2, 4].include?(hash[key].length)
+    def validate_user_input
+      raise ArgumentError unless @user_input.is_a? Array
+      [0, 1].each do |index|
+        raise ArgumentError unless [2, 4].include?(@user_input[index].length)
       end
     end
 
-    def display_help_info
+    def show_help_and_quit
       puts    <<-EOS
 =========TERMIT=========
 USAGE:
@@ -55,7 +54,7 @@ EOS
        exit
     end
 
-    def display_version_number
+    def show_version_and_quit
       puts "Termit #{Termit::VERSION}"
       exit
     end

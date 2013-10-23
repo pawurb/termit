@@ -1,5 +1,7 @@
 module Termit
   class UrlConstructor
+    Host = "http://translate.google.com"
+
     def initialize options
       @options = options
     end
@@ -15,16 +17,11 @@ module Termit
     private
 
     def construct_text_url
-      # "#{host}/?tl=#{@options[:target_lang]}&sl=#{@options[:source_lang]}&ie=UTF-8&oe=UTF-8"
-      "#{host}/translate_a/t?client=t&sl=#{@options[:source_lang]}&tl=#{@options[:target_lang]}&hl=pl&sc=2&ie=UTF-8&oe=UTF-8&prev=enter&ssel=0&tsel=0&"
+      "#{Host}/translate_a/t?client=t&sl=#{@options[:source_lang]}&tl=#{@options[:target_lang]}&hl=pl&sc=2&ie=UTF-8&oe=UTF-8&prev=enter&ssel=0&tsel=0&"
     end
 
     def construct_sound_url
-      "#{host}/translate_tts?tl=#{@options[:target_lang]}&ie=UTF-8&oe=UTF-8"
-    end
-
-    def host
-      "http://translate.google.com"
+      "#{Host}/translate_tts?tl=#{@options[:target_lang]}&ie=UTF-8&oe=UTF-8"
     end
   end
 end
