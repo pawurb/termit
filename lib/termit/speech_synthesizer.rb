@@ -1,3 +1,4 @@
+#encoding: UTF-8
 module Termit
   class SpeechSynthesizer
     def initialize options

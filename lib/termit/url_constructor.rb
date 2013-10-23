@@ -1,3 +1,4 @@
+#encoding: UTF-8
 module Termit
   class UrlConstructor
     Host = "http://translate.google.com"

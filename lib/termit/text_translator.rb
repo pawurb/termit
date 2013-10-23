@@ -1,6 +1,10 @@
+#encoding: UTF-8
 module Termit
   class TextTranslator
     attr_reader :text
+    extend ::Delegation
+    @output_manager = Termit::OutputManager.new
+    delegate :display_translation_flow, to: @output_manager
 
     def initialize options
       @options = options.merge(talk: false)
@@ -9,12 +13,8 @@ module Termit
 
     def call
       response = Termit::DataFetcher.new(@url, @options[:text]).data
-      print_info
+      display_translation_flow @options[:source_lang], @options[:target_lang]
       @text = Termit::TextResponseHandler.new(response.body, @options[:synonyms]).call
-    end
-
-    def print_info
-      puts "Translation from #{@options[:source_lang].upcase} to #{@options[:target_lang].upcase}:"
     end
   end
 end

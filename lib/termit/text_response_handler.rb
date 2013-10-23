@@ -1,17 +1,19 @@
+#encoding: UTF-8
 module Termit
   class TextResponseHandler
-    def initialize text, synonyms
+    extend ::Delegation
+    @output_manager = Termit::OutputManager.new
+    delegate :display_synonyms, to: @output_manager
+
+    def initialize text, synonyms_wanted
       @text = decode text
-      @extract_synonyms = synonyms
+      @synonyms_wanted = synonyms_wanted
     end
 
     def call
       translation = extract_translation
       puts translation
-      if @extract_synonyms
-        puts ''
-        puts 'Synonyms:', extract_synonyms
-      end
+      display_synonyms extract_synonyms if @synonyms_wanted
       translation
     end
 
