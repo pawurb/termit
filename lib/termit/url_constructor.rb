@@ -24,7 +24,7 @@ module Termit
     end
 
     def host
-      "http://translate.google.pl/translate_a"
+      "http://translate.google.com/translate_a"
     end
   end
 end

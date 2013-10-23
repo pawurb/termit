@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://translate.google.pl/translate_a/t?client=t&hl=pl&ie=UTF-8&oe=UTF-8&prev=enter&sc=2&sl=en&ssel=0&tl=pl&tsel=0
+    uri: http://translate.google.com/translate_a/t?client=t&hl=pl&ie=UTF-8&oe=UTF-8&prev=enter&sc=2&sl=en&ssel=0&tl=pl&tsel=0
     body:
       encoding: US-ASCII
       string: text=hey+cowboy+where+is+your+horse
@@ -23,9 +23,9 @@ http_interactions:
       Pragma:
       - no-cache
       Date:
-      - Wed, 23 Oct 2013 15:11:48 GMT
+      - Wed, 23 Oct 2013 15:15:36 GMT
       Expires:
-      - Wed, 23 Oct 2013 15:11:48 GMT
+      - Wed, 23 Oct 2013 15:15:36 GMT
       Cache-Control:
       - private, max-age=600
       Content-Type:
@@ -33,8 +33,8 @@ http_interactions:
       Content-Language:
       - pl
       Set-Cookie:
-      - PREF=ID=0772267bf16ad927:TM=1382541108:LM=1382541108:S=dQ_8XonwLdE54Ofa; expires=Fri,
-        23-Oct-2015 15:11:48 GMT; path=/; domain=.google.pl
+      - PREF=ID=59f956040e7bb9f8:TM=1382541336:LM=1382541336:S=8F7wmAjCUSXM3gWD; expires=Fri,
+        23-Oct-2015 15:15:36 GMT; path=/; domain=.google.com
       X-Content-Type-Options:
       - nosniff
       Content-Disposition:
@@ -69,5 +69,5 @@ http_interactions:
         b25pYSIsMCwxLDBdLFsidHdvamVnbyBrb25pYSIsMCwxLDBdLFsic3dvamVn
         byBrb25pYSIsMCwxLDBdXSxbWzIwLDMwXV0sIiJdXSwsLFtbImVuIl1dLDFd
     http_version: 
-  recorded_at: Wed, 23 Oct 2013 15:11:48 GMT
+  recorded_at: Wed, 23 Oct 2013 15:15:36 GMT
 recorded_with: VCR 2.5.0

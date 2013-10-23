@@ -9,7 +9,7 @@ describe Termit::TextResponseHandler do
       end
 
       it "extracts data from HTTP response body" do
-        expect(STDOUT).to receive(:puts).with("Twoja matka")
+        expect(STDOUT).to receive(:puts).with("tyłek")
         handler.call
       end
     end
@@ -21,7 +21,8 @@ describe Termit::TextResponseHandler do
       end
 
       it "extracts data from HTTP response body" do
-        expect(STDOUT).to receive(:puts).with("Twoja matka")
+        expect(STDOUT).to receive(:puts).with("tyłek")
+        expect(STDOUT).to receive(:puts).with("\"osioł\",\"tyłek\",\"dupa\",\"zadek\"")
         handler.call
       end
     end

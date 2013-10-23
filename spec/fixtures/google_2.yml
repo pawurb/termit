@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://translate.google.pl/translate_a/t?client=t&hl=pl&ie=UTF-8&oe=UTF-8&prev=enter&sc=2&sl=en&ssel=0&tl=pl&tsel=0
+    uri: http://translate.google.com/translate_a/t?client=t&hl=pl&ie=UTF-8&oe=UTF-8&prev=enter&sc=2&sl=en&ssel=0&tl=pl&tsel=0
     body:
       encoding: US-ASCII
       string: text=ass
@@ -23,9 +23,9 @@ http_interactions:
       Pragma:
       - no-cache
       Date:
-      - Wed, 23 Oct 2013 15:11:31 GMT
+      - Wed, 23 Oct 2013 15:15:36 GMT
       Expires:
-      - Wed, 23 Oct 2013 15:11:31 GMT
+      - Wed, 23 Oct 2013 15:15:36 GMT
       Cache-Control:
       - private, max-age=600
       Content-Type:
@@ -33,8 +33,8 @@ http_interactions:
       Content-Language:
       - pl
       Set-Cookie:
-      - PREF=ID=89ba3b34be0acb53:TM=1382541091:LM=1382541091:S=Cj6_67_PBFN7Z-X8; expires=Fri,
-        23-Oct-2015 15:11:31 GMT; path=/; domain=.google.pl
+      - PREF=ID=fd55461f0472f8d6:TM=1382541336:LM=1382541336:S=l-ad-xPtXXlsORED; expires=Fri,
+        23-Oct-2015 15:15:36 GMT; path=/; domain=.google.com
       X-Content-Type-Options:
       - nosniff
       Content-Disposition:
@@ -61,7 +61,7 @@ http_interactions:
         LFtbInR5xYJlayIsWzRdLDEsMCw3NjUsMCwxLDBdXSxbWyJhc3MiLDQsW1si
         dHnFgmVrIiw3NjUsMSwwXSxbImR1cGEiLDIzMSwxLDBdLFsib3Npb8WCIiwy
         LDEsMF0sWyJvc8WCYSIsMCwxLDBdLFsiYXNzIiwwLDEsMF1dLFtbMCwzXV0s
-        ImFzcyJdXSwsLFtdLDJd
+        ImFzcyJdXSwsLFtdLDNd
     http_version: 
-  recorded_at: Wed, 23 Oct 2013 15:11:31 GMT
+  recorded_at: Wed, 23 Oct 2013 15:15:36 GMT
 recorded_with: VCR 2.5.0
