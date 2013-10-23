@@ -10,7 +10,8 @@ module Termit
     def call
       response = Termit::DataFetcher.new(@url, @options[:text]).data
       print_info
-      @text = Termit::TextResponseHandler.new(response.body).call
+      p response.body
+      @text = Termit::TextResponseHandler.new(response.body, @options[:synonyms]).call
     end
 
     def print_info

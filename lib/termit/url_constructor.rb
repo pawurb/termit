@@ -15,7 +15,8 @@ module Termit
     private
 
     def construct_text_url
-      "#{host}/?tl=#{@options[:target_lang]}&sl=#{@options[:source_lang]}&ie=UTF-8&oe=UTF-8"
+      # "#{host}/?tl=#{@options[:target_lang]}&sl=#{@options[:source_lang]}&ie=UTF-8&oe=UTF-8"
+      "#{host}/t?client=t&sl=#{@options[:source_lang]}&tl=#{@options[:target_lang]}&hl=pl&sc=2&ie=UTF-8&oe=UTF-8&prev=enter&ssel=0&tsel=0&"
     end
 
     def construct_voice_url
@@ -23,7 +24,7 @@ module Termit
     end
 
     def host
-      "http://translate.google.com"
+      "http://translate.google.pl/translate_a"
     end
   end
 end

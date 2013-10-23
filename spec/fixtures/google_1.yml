@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://translate.google.pl/translate_a/t?client=t&hl=pl&ie=UTF-8&oe=UTF-8&prev=enter&sc=2&sl=en&ssel=0&tl=pl&tsel=0
+    body:
+      encoding: US-ASCII
+      string: text=hey+cowboy+where+is+your+horse
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Pragma:
+      - no-cache
+      Date:
+      - Wed, 23 Oct 2013 15:11:48 GMT
+      Expires:
+      - Wed, 23 Oct 2013 15:11:48 GMT
+      Cache-Control:
+      - private, max-age=600
+      Content-Type:
+      - text/javascript; charset=UTF-8
+      Content-Language:
+      - pl
+      Set-Cookie:
+      - PREF=ID=0772267bf16ad927:TM=1382541108:LM=1382541108:S=dQ_8XonwLdE54Ofa; expires=Fri,
+        23-Oct-2015 15:11:48 GMT; path=/; domain=.google.pl
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - attachment
+      Server:
+      - HTTP server (unknown)
+      X-Xss-Protection:
+      - 1; mode=block
+      Alternate-Protocol:
+      - 80:quic
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W1tbImhleSBjb3dib3kgZ2R6aWUgamVzdCB0d8OzaiBrb8WEIiwiaGV5IGNv
+        d2JveSB3aGVyZSBpcyB5b3VyIGhvcnNlIiwiIiwiIl1dLCwiZW4iLCxbWyJo
+        ZXkiLFs0XSwxLDAsNzk3LDAsMSwwXSxbImNvd2JveSIsWzVdLDEsMCw3OTEs
+        MSwyLDBdLFsiZ2R6aWUiLFs2XSwxLDAsNzU5LDIsMywwXSxbImplc3QiLFs3
+        XSwxLDAsNzU3LDMsNCwwXSxbInR3w7NqIGtvxYQiLFs4XSwxLDAsNzAzLDQs
+        NiwwXV0sW1siaGV5Iiw0LFtbImhleSIsNzk3LDEsMF0sWyJoZWoiLDIwMiwx
+        LDBdLFsiQ3plxZvEhyIsMCwxLDBdXSxbWzAsM11dLCJoZXkgY293Ym95IHdo
+        ZXJlIGlzIHlvdXIgaG9yc2UiXSxbImNvd2JveSIsNSxbWyJjb3dib3kiLDc5
+        MSwxLDBdLFsia293Ym9qIiw1LDEsMF0sWyJrb3dib2plbSIsMCwxLDBdLFsi
+        a293Ym9qc2tpZSIsMCwxLDBdLFsia293Ym9qc2tpIiwwLDEsMF1dLFtbNCwx
+        MF1dLCIiXSxbIndoZXJlIiw2LFtbImdkemllIiw3NTksMSwwXSxbImt0w7Ny
+        eW0iLDAsMSwwXSxbImt0w7NyeWNoIiwwLDEsMF0sWyJ3IGt0w7NyeW0iLDAs
+        MSwwXV0sW1sxMSwxNl1dLCIiXSxbImlzIiw3LFtbImplc3QiLDc1NywxLDBd
+        LFsidG8iLDAsMSwwXSxbIm1hIiwwLDEsMF0sWyJ6bmFqZHVqZSIsMCwxLDBd
+        LFsic2nEmSIsMCwxLDBdXSxbWzE3LDE5XV0sIiJdLFsieW91ciBob3JzZSIs
+        OCxbWyJ0d8OzaiBrb8WEIiw3MDMsMSwwXSxbImtvxYQiLDUzLDEsMF0sWyJr
+        b25pYSIsMCwxLDBdLFsidHdvamVnbyBrb25pYSIsMCwxLDBdLFsic3dvamVn
+        byBrb25pYSIsMCwxLDBdXSxbWzIwLDMwXV0sIiJdXSwsLFtbImVuIl1dLDFd
+    http_version: 
+  recorded_at: Wed, 23 Oct 2013 15:11:48 GMT
+recorded_with: VCR 2.5.0

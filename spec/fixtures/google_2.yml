@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://translate.google.pl/translate_a/t?client=t&hl=pl&ie=UTF-8&oe=UTF-8&prev=enter&sc=2&sl=en&ssel=0&tl=pl&tsel=0
+    body:
+      encoding: US-ASCII
+      string: text=ass
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Pragma:
+      - no-cache
+      Date:
+      - Wed, 23 Oct 2013 15:11:31 GMT
+      Expires:
+      - Wed, 23 Oct 2013 15:11:31 GMT
+      Cache-Control:
+      - private, max-age=600
+      Content-Type:
+      - text/javascript; charset=UTF-8
+      Content-Language:
+      - pl
+      Set-Cookie:
+      - PREF=ID=89ba3b34be0acb53:TM=1382541091:LM=1382541091:S=Cj6_67_PBFN7Z-X8; expires=Fri,
+        23-Oct-2015 15:11:31 GMT; path=/; domain=.google.pl
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - attachment
+      Server:
+      - HTTP server (unknown)
+      X-Xss-Protection:
+      - 1; mode=block
+      Alternate-Protocol:
+      - 80:quic
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W1tbInR5xYJlayIsImFzcyIsIiIsIiJdXSxbWyJyemVjem93bmlrIixbIm9z
+        aW/FgiIsInR5xYJlayIsImR1cGEiLCJ6YWRlayJdLFtbIm9zaW/FgiIsWyJh
+        c3MiLCJkb25rZXkiLCJqYWNrYXNzIiwiYnVycm8iLCJtb2tlIiwic3R1cGlk
+        Il0sLDFdLFsidHnFgmVrIixbImJhY2tzaWRlIiwiYm90dG9tIiwiYnVtIiwi
+        YmVoaW5kIiwiYnV0dG9ja3MiLCJhcnNlIl0sLDAuMjc3Njg5OTY0XSxbImR1
+        cGEiLFsiYXNzIiwiZmFubnkiLCJhcnNlIl0sLDAuMTEyMTk2ODkyXSxbInph
+        ZGVrIixbImJ1bSIsImFzcyIsImJhY2tzaWRlIiwiYnV0dG9ja3MiLCJib3R0
+        b20iLCJmYW5ueSJdLCwwLjAwMTQzNDU5MTcyXV0sImFzcyIsMV1dLCJlbiIs
+        LFtbInR5xYJlayIsWzRdLDEsMCw3NjUsMCwxLDBdXSxbWyJhc3MiLDQsW1si
+        dHnFgmVrIiw3NjUsMSwwXSxbImR1cGEiLDIzMSwxLDBdLFsib3Npb8WCIiwy
+        LDEsMF0sWyJvc8WCYSIsMCwxLDBdLFsiYXNzIiwwLDEsMF1dLFtbMCwzXV0s
+        ImFzcyJdXSwsLFtdLDJd
+    http_version: 
+  recorded_at: Wed, 23 Oct 2013 15:11:31 GMT
+recorded_with: VCR 2.5.0

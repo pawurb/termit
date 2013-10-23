@@ -1,20 +1,34 @@
+require 'json'
 module Termit
   class TextResponseHandler
-    def initialize text
-      @text = text
+    def initialize text, synonyms
+      @text = decode text
+      @extract_synonyms = synonyms
     end
 
     def call
-      p parsed_data
+      translation = extract_translation
+      puts translation
+      puts extract_synonyms if @extract_synonyms
+      translation
     end
 
     private
 
-    def parsed_data
-      translation = @text.scan(/(TRANSLATED_TEXT=')(.*?)(')/).pop[1]
+    def extract_translation
+      @text.split("[[")[1].split("\"")[1]
+    end
+
+    def extract_synonyms
+      synonyms_data = @text.split("[[")[2].split("[")[1]
+      length = synonyms_data.length
+      synonyms_data[0..(length-3)]
+    end
+
+    def decode text
       encoding = 'UTF-8'
-      translation.gsub!(/(\\x26#39;)/, "'")
-      translation.force_encoding(encoding).encode(encoding)
+      text.gsub!(/(\\x26#39;)/, "'")
+      text.force_encoding(encoding).encode(encoding)
     end
   end
 end
