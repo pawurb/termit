@@ -39,12 +39,11 @@ termit en zh "hey cowboy where is your horse?" -v
 
 #### Synonyms
 
-Specify a **-s** (synonyms) to get the list of synonyms if available:
+Specify a **-s** (synonyms) flag to get the list of synonyms if available:
 ``` ruby
 termit es en muchacho -s
 => boy
 => Synonyms: boy, lad, youngster, laddie, cully
-
 ```
 
 
@@ -75,15 +74,8 @@ For MacOSX:
 
     brew install mpg123
 
-## Status
 
-Project is in "but it works on my machine..." development phase. Any feedback will be appreciated. You can contact me on: p.urbanek89@gmail.com
-
-
-
-
-
-
+Any feedback will be appreciated. You can contact me on: p.urbanek89@gmail.com
 
 
 
