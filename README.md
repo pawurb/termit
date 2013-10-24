@@ -31,11 +31,22 @@ termit fr ru qui est votre papa?
 ```
 #### Speech synthesis
 
-Specify a **-v** (voice) flag to use speech synthesis:
+Specify a **-t** (talk) flag to use speech synthesis:
 ``` ruby
 termit en zh "hey cowboy where is your horse?" -v
-=> "嘿，牛仔是你的马在哪里？" #and a nice chinese girl voice says something about a horse
+=> "嘿，牛仔是你的马在哪里？" #and a chinese voice says something about a horse
 ```
+
+#### Synonyms
+
+Specify a **-s** (synonyms) flag to get the list of synonyms if available:
+``` ruby
+termit es en muchacho -s
+=> boy
+=> Synonyms: boy, lad, youngster, laddie, cully
+```
+
+
 
 ## Language codes:
 * english - en
@@ -63,15 +74,10 @@ For MacOSX:
 
     brew install mpg123
 
-## Status
-
-Project is in "but it works on my machine..." development phase. Any feedback will be appreciated. You can contact me on: p.urbanek89@gmail.com
 
 
 
-
-
-
+Any feedback will be appreciated. You can contact me on: p.urbanek89@gmail.com
 
 
 
