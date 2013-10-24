@@ -31,9 +31,9 @@ termit fr ru qui est votre papa?
 ```
 #### Speech synthesis
 
-Specify a **-t** (talk) flag to use speech synthesis:
+Specify a **-t** (talk) flag to use speech synthesis (requires mpg123):
 ``` ruby
-termit en zh "hey cowboy where is your horse?" -v
+termit en zh "hey cowboy where is your horse?" -t
 => "嘿，牛仔是你的马在哪里？" #and a chinese voice says something about a horse
 ```
 
