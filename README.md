@@ -64,7 +64,7 @@ To find all available language codes visit www.translate.google.com. Choose lang
 
 Works with Ruby 1.9.2 and higher.
 
-To use speech synthesis (yes it talks) you need to have mpg123 installed.
+To use speech synthesis you need to have mpg123 installed.
 
 For Ubuntu:
 
@@ -78,7 +78,6 @@ For MacOSX:
 
 
 Any feedback will be appreciated. You can contact me on: p.urbanek89@gmail.com
-
 
 
 
