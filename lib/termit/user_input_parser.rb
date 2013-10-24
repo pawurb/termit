@@ -9,13 +9,13 @@ module Termit
       @user_input = user_input
       quit_if_required
       validate_user_input
+    rescue ArgumentError
+      display_error_info
+      exit
     end
 
     def options
       parse_input
-    rescue ArgumentError
-      display_error_info
-      exit
     end
 
     private

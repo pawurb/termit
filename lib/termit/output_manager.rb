@@ -8,7 +8,7 @@ module Termit
     def display_help
       puts    <<-EOS
 =========TERMIT=========
-USAGE:
+Usage:
 termit 'source_language' 'target_language' 'text'
 
 Example:
