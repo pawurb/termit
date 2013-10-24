@@ -8,6 +8,7 @@ require 'termit/speech_synthesizer'
 require 'termit/url_constructor'
 require 'termit/data_fetcher'
 require 'termit/text_response_handler'
+require 'termit/version'
 
 module Termit
 end
