@@ -26,7 +26,7 @@ module Termit
     def extract_synonyms
       synonyms_data = @text.split("[[")[2].split("[")[1]
       length = synonyms_data.length
-      if synonyms_data[0] == '4'
+      if synonyms_data[0] == '4' # my code works i have no idea why ..
         "---"
       else
         synonyms_data[0..(length-3)].delete("\"").gsub(/(,)/, ", ")
