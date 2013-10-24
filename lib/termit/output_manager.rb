@@ -22,12 +22,13 @@ EOS
     puts "Termit #{Termit::VERSION}"
   end
 
-  def display_translation_flow from, to
-    puts "Translation from #{from.upcase} to #{to.upcase}:"
+  def display_translation text
+    print "=> "
+    puts text
   end
 
   def display_synonyms synonyms
-    puts ''
-    puts 'Synonyms:', synonyms
+    print '=> Synonyms:'
+    puts synonyms
   end
 end

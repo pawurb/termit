@@ -3,7 +3,7 @@ module Termit
   class TextResponseHandler
     extend ::Delegation
     @output_manager = Termit::OutputManager.new
-    delegate :display_synonyms, to: @output_manager
+    delegate :display_synonyms, :display_translation, to: @output_manager
 
     def initialize text, synonyms_wanted
       @text = decode text
@@ -12,7 +12,7 @@ module Termit
 
     def call
       translation = extract_translation
-      puts translation
+      display_translation translation
       display_synonyms extract_synonyms if @synonyms_wanted
       translation
     end
@@ -27,7 +27,7 @@ module Termit
       synonyms_data = @text.split("[[")[2].split("[")[1]
       length = synonyms_data.length
       if synonyms_data[0] == '4' # my code works i have no idea why ..
-        "---"
+        " ---"
       else
         synonyms_data[0..(length-3)].delete("\"").gsub(/(,)/, ", ")
       end
