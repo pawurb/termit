@@ -1,11 +1,10 @@
 #encoding: UTF-8
 class Termit::OutputManager
-  def display_error_info_and_quit
+  def display_error_info
     puts "TERMIT: Wrong data. Example: 'termit en es the cowboy ' => 'el vaquero"
-    exit
   end
 
-  def display_help_and_quit
+  def display_help
     puts    <<-EOS
 =========TERMIT=========
 USAGE:
@@ -17,12 +16,10 @@ termit en fr 'hey cowboy where is your horse?'
 
 Check docs at: github.com/pawurb/termit
 EOS
-    exit
   end
 
-  def display_version_and_quit
+  def display_version
     puts "Termit #{Termit::VERSION}"
-    exit
   end
 
   def display_translation_flow from, to

@@ -4,18 +4,18 @@ module Termit
     extend ::Delegation
     @output_manager = Termit::OutputManager.new
 
-    delegate :display_error_info_and_quit, :display_help_and_quit, :display_version_and_quit, to: @output_manager
+    delegate :display_error_info, :display_help, :display_version, to: @output_manager
     def initialize user_input
       @user_input = user_input
-      display_help_and_quit if @user_input.index("-h") || @user_input.empty?
-      display_version_and_quit if @user_input.index("-v")
+      quit_if_required
       validate_user_input
     end
 
     def options
       parse_input
     rescue ArgumentError
-      display_error_info_and_quit
+      display_error_info
+      exit
     end
 
     private
@@ -39,6 +39,17 @@ module Termit
       raise ArgumentError unless @user_input.is_a? Array
       [0, 1].each do |index|
         raise ArgumentError unless [2, 4].include?(@user_input[index].length)
+      end
+    end
+
+    def quit_if_required
+      if @user_input.index("-h") || @user_input.empty?
+        display_help
+        exit
+      end
+      if @user_input.index("-v")
+        display_version
+        exit
       end
     end
   end
