@@ -15,6 +15,10 @@ Example:
 termit en fr 'hey cowboy where is your horse?'
 => 'hey cow-boy ou est votre cheval?'
 
+Options:
+-t - speech synthesis
+-s - synonyms list
+
 Check docs at: github.com/pawurb/termit
 EOS
     end
@@ -29,7 +33,7 @@ EOS
     end
 
     def display_synonyms synonyms
-      print '=> Synonyms:'
+      print '=> Synonyms: '
       puts synonyms
     end
   end
