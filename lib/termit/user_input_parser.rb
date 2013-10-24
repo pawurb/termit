@@ -37,6 +37,7 @@ module Termit
 
     def validate_user_input
       raise ArgumentError unless @user_input.is_a? Array
+      raise ArgumentError unless @user_input.length > 2
       [0, 1].each do |index|
         raise ArgumentError unless [2, 4].include?(@user_input[index].length)
       end
