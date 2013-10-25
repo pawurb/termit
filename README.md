@@ -8,6 +8,13 @@ Termit is an easy way to use Google Translate in your terminal.
 gem install termit
 ```
 
+Under RVM, your termit command may only be available under the ruby you install termit into. To prevent this, and to prevent gem conflicts, install termit into a dedicated gemset and create wrapper scripts:
+
+```ruby
+rvm default@termit --create do gem install termit
+rvm wrapper default@termit --no-prefix termit
+```
+
 ## Usage
 ```ruby
 termit 'source_language' 'target_language' 'text'
