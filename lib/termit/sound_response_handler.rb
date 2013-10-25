@@ -7,13 +7,24 @@ module Termit
       @data = data
     end
 
-    def call
-      location = "#{File.expand_path('~')}/.termit"
+    def call(os)
+	  if os == "Windows"
+	    location = ENV['HOMEDRIVE'] + ENV['HOMEPATH'] + "\\.termit"
+      else
+        location = "#{File.expand_path('~')}/.termit"
+      end
+
       create_target_dir location
       File.open("#{location}/sound_response.mpeg", "wb") do |file|
         file.write(@data)
       end
-      system "mpg123 -q #{location}/sound_response.mpeg"
+
+      if os == "Windows"
+	    # Need to find alternative to -Z (random play).  The mpeg was being cut short.
+	    system "mpg123 -q -Z #{location}/sound_response.mpeg"
+      else
+	    system "mpg123 -q #{location}/sound_response.mpeg"
+      end
     end
 
     private
