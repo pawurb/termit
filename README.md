@@ -77,7 +77,7 @@ For MacOSX:
 
 
 
-Any feedback will be appreciated. You can contact me on: p.urbanek89@gmail.com
+This is my first open-source project for people to use. Any feedback will be appreciated. You can contact me on: p.urbanek89@gmail.com
 
 
 
