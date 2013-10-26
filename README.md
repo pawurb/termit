@@ -73,6 +73,10 @@ For Ubuntu:
 For MacOSX:
 
     brew install mpg123
+	
+For Windows:
+	
+	Visit http://www.mpg123.de/download/win32/ or http://www.mpg123.de/download/win64/ for latest binaries.
 
 ## Status
 
