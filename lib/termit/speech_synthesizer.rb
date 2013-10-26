@@ -1,6 +1,10 @@
 #encoding: UTF-8
 module Termit
   class SpeechSynthesizer
+    extend ::Delegation
+    @output_manager = Termit::OutputManager.new
+    delegate :display_player_error_and_quit, to: @output_manager
+
     def initialize options
       check_sound_player
       @text = options[:text]
@@ -16,19 +20,8 @@ module Termit
 
     def check_sound_player
       unless system 'which mpg123 > /dev/null'
-        abort(error_message_for_platform)
+        display_player_error_and_quit
       end
     end
-
-    def error_message_for_platform 
-      message = "Termit speech synthesis requires mpg123 installed."
-      case Gem::Platform.local.os
-      when "darwin"
-        message << "\nPlease run 'brew install mpg123'"
-      when "linux"
-        message << "\nPlease run 'sudo apt-get install mpg123'"
-      end
-      message
-    end
-  end
+ end
 end
