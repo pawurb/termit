@@ -1,6 +1,10 @@
 #encoding: UTF-8
 module Termit
   class SpeechSynthesizer
+    extend ::Delegation
+    @output_manager = Termit::OutputManager.new
+    delegate :display_player_error_and_quit, to: @output_manager
+
     def initialize options
       check_sound_player
       @text = options[:text]
@@ -16,8 +20,8 @@ module Termit
 
     def check_sound_player
       unless system 'which mpg123 > /dev/null'
-        raise "Termit speech synthesis requires mpg123 installed"
+        display_player_error_and_quit
       end
     end
-  end
+ end
 end

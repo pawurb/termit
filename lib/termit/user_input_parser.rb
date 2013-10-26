@@ -4,14 +4,14 @@ module Termit
     extend ::Delegation
     @output_manager = Termit::OutputManager.new
 
-    delegate :display_error_info, :display_help, :display_version, to: @output_manager
+    delegate :display_error_info_and_quit, :display_help_and_quit, :display_version_and_quit, to: @output_manager
+
     def initialize user_input
       @user_input = user_input
       quit_if_required
       validate_user_input
     rescue ArgumentError
-      display_error_info
-      exit
+      display_error_info_and_quit
     end
 
     def options
@@ -44,14 +44,8 @@ module Termit
     end
 
     def quit_if_required
-      if @user_input.index("-h") || @user_input.empty?
-        display_help
-        exit
-      end
-      if @user_input.index("-v")
-        display_version
-        exit
-      end
+      display_help_and_quit if @user_input.index("-h") || @user_input.empty?
+      display_version_and_quit if @user_input.index("-v")
     end
   end
 end
