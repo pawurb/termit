@@ -6,7 +6,7 @@ describe Termit::OutputManager do
   describe "instance_methods" do
     describe "display_error_info_and_quit" do
       it "does what is says" do
-        expect(STDOUT).to receive(:puts).with("TERMIT: Wrong data. Example: 'termit en es the cowboy ' => 'el vaquero")
+        expect(STDOUT).to receive(:puts).with("TERMIT: Wrong data. Example: 'termit en es the cowboy ' => 'el vaquero'")
         subject.display_error_info
       end
     end
