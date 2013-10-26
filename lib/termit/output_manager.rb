@@ -2,7 +2,7 @@
 module Termit
   class OutputManager
     def display_error_info
-      puts "TERMIT: Wrong data. Example: 'termit en es the cowboy ' => 'el vaquero"
+      puts "TERMIT: Wrong data. Example: 'termit en es the cowboy ' => 'el vaquero'"
     end
 
     def display_help
