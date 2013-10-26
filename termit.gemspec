@@ -20,4 +20,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "vcr", '~> 2.5.0'
   gem.add_development_dependency "webmock", '~> 1.12.0'
   gem.add_development_dependency "rake"
+  gem.add_development_dependency "sys-uname"
 end
