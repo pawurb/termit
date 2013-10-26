@@ -2,11 +2,12 @@
 module Termit
   class OutputManager
     def display_error_info_and_quit
-      abort "TERMIT: Wrong data. Example: 'termit en es the cowboy ' => 'el vaquero'"
+      puts "TERMIT: Wrong data. Example: 'termit en es the cowboy ' => 'el vaquero'"
+      exit
     end
 
     def display_help_and_quit
-      abort    <<-EOS
+      puts    <<-EOS
 =========TERMIT=========
 Usage:
 termit 'source_language' 'target_language' 'text'
@@ -21,6 +22,7 @@ Options:
 
 Check docs at: github.com/pawurb/termit
 EOS
+      exit
     end
 
     def display_player_error_and_quit
@@ -47,6 +49,5 @@ EOS
       print '=> Synonyms: '
       puts synonyms
     end
-
   end
 end
