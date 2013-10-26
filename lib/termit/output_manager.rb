@@ -6,6 +6,17 @@ module Termit
       exit
     end
 
+    def display_player_error_and_quit
+      message = "Termit speech synthesis requires mpg123 installed."
+      case Gem::Platform.local.os
+      when "darwin"
+        message << "\nPlease run 'brew install mpg123'"
+      when "linux"
+        message << "\nPlease run 'sudo apt-get install mpg123'"
+      end
+      abort message
+    end
+
     def display_help_and_quit
       puts    <<-EOS
 =========TERMIT=========
@@ -25,19 +36,10 @@ EOS
       exit
     end
 
-    def display_player_error_and_quit
-      message = "Termit speech synthesis requires mpg123 installed."
-      case Gem::Platform.local.os
-      when "darwin"
-        message << "\nPlease run 'brew install mpg123'"
-      when "linux"
-        message << "\nPlease run 'sudo apt-get install mpg123'"
-      end
-      abort message
-    end
 
     def display_version_and_quit
-      abort "Termit #{Termit::VERSION}"
+      puts "Termit #{Termit::VERSION}"
+      exit
     end
 
     def display_translation text
