@@ -42,9 +42,6 @@ describe Termit::UserInputParser do
       it "with incorrect language options format raiser error" do
         expect{ Termit::UserInputParser.new ['ang', 'po polski', 'hey cowboy!', '-t'] }.to raise_error SystemExit
       end
-
     end
-
   end
-
 end

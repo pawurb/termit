@@ -1,12 +1,12 @@
 #encoding: UTF-8
 module Termit
   class OutputManager
-    def display_error_info
-      puts "TERMIT: Wrong data. Example: 'termit en es the cowboy ' => 'el vaquero'"
+    def display_error_info_and_quit
+      abort "TERMIT: Wrong data. Example: 'termit en es the cowboy ' => 'el vaquero'"
     end
 
-    def display_help
-      puts    <<-EOS
+    def display_help_and_quit
+      abort    <<-EOS
 =========TERMIT=========
 Usage:
 termit 'source_language' 'target_language' 'text'
@@ -23,8 +23,19 @@ Check docs at: github.com/pawurb/termit
 EOS
     end
 
-    def display_version
-      puts "Termit #{Termit::VERSION}"
+    def display_player_error_and_quit
+      message = "Termit speech synthesis requires mpg123 installed."
+      case Gem::Platform.local.os
+      when "darwin"
+        message << "\nPlease run 'brew install mpg123'"
+      when "linux"
+        message << "\nPlease run 'sudo apt-get install mpg123'"
+      end
+      abort message
+    end
+
+    def display_version_and_quit
+      abort "Termit #{Termit::VERSION}"
     end
 
     def display_translation text
@@ -36,5 +47,6 @@ EOS
       print '=> Synonyms: '
       puts synonyms
     end
+
   end
 end

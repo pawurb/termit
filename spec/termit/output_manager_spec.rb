@@ -6,22 +6,25 @@ describe Termit::OutputManager do
   describe "instance_methods" do
     describe "display_error_info_and_quit" do
       it "does what is says" do
-        expect(STDOUT).to receive(:puts).with("TERMIT: Wrong data. Example: 'termit en es the cowboy ' => 'el vaquero'")
-        subject.display_error_info
+        expect { subject.display_error_info_and_quit }.to raise_error SystemExit
       end
     end
 
     describe "display_help_and_quit" do
       it "does what is says" do
-        expect(STDOUT).to receive(:puts)
-        subject.display_help
+        expect { subject.display_help_and_quit }.to raise_error SystemExit
       end
     end
 
     describe "display_version_and_quit" do
       it "does what is says" do
-        expect(STDOUT).to receive(:puts).with("Termit #{Termit::VERSION}")
-        subject.display_version
+        expect { subject.display_version_and_quit }.to raise_error SystemExit
+      end
+    end
+
+    describe "display_player_error_and_quit" do
+      it "does what is says" do
+        expect { subject.display_player_error_and_quit }.to raise_error SystemExit
       end
     end
   end
