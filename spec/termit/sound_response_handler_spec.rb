@@ -3,10 +3,13 @@ require 'spec_helper'
 
 describe Termit::SoundResponseHandler do
   describe "call method" do
-    it "should save the sound file" do
-    end
+    subject { Termit::SoundResponseHandler.new('tralala') }
+    let(:location) { "#{File.expand_path('~')}/.termit" }
 
-    it "should play the file" do
+    it "saves and plays the sound file the sound file" do
+      File.should_receive(:open).with("#{location}/sound_response.mpeg", "wb")
+      Object.any_instance.should_receive(:system).with("mpg123 -q #{location}/sound_response.mpeg")
+      subject.call
     end
   end
 end
