@@ -2,6 +2,8 @@ require 'rubygems'
 require 'bundler/setup'
 require 'vcr'
 require 'webmock/rspec'
+require 'coveralls'
+Coveralls.wear!
 
 require_relative '../lib/termit'
 
