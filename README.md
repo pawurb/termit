@@ -80,7 +80,7 @@ This is my first open-source project for people to use. Any feedback will be app
 
 You can contact me on: p.urbanek89@gmail.com
 
-Btw. currently I am available for hire as a rails developer and willing to relocate.
+Currently I am available for hire as a rails developer and willing to relocate.
 
 
 
