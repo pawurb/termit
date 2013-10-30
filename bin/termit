@@ -6,11 +6,10 @@ $LOAD_PATH.unshift(File.dirname(__FILE__) + '/../lib') unless $LOAD_PATH.include
 require 'termit'
 
 begin
-options = Termit::UserInputParser.new(ARGV).options
-Termit::Main.new(options).translate
+  options = Termit::UserInputParser.new(ARGV).options
+  Termit::Main.new(options).translate
 rescue Interrupt
-  STDERR.puts "Exiting due to user request."
-  exit(1)
+  abort "\nTermit: exiting due to user request"
 end
 
 
