@@ -9,7 +9,8 @@ begin
   options = Termit::UserInputParser.new(ARGV).options
   Termit::Main.new(options).translate
 rescue Interrupt
-  abort "\nTermit: exiting due to user request"
+  STDERR.puts "\nTermit: exiting due to user request"
+  exit 130
 end
 
 
