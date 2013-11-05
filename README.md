@@ -78,8 +78,6 @@ For MacOSX:
 
 This is my first open-source project for people to use. Any feedback will be appreciated.
 
-Currently I am available for hire as a rails developer and willing to relocate.
-
 You can contact me on: p.urbanek89@gmail.com
 
 
