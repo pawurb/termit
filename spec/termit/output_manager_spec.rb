@@ -2,30 +2,13 @@
 require 'spec_helper'
 
 describe Termit::OutputManager do
+  METHOD_NAMES = ["display_error_info_and_quit", "display_help_and_quit",
+                  "display_version_and_quit", "display_player_error_and_quit"]
   subject { Termit::OutputManager.new }
+
   describe "instance_methods" do
-    describe "display_error_info_and_quit" do
-      it "does what is says" do
-        expect { subject.display_error_info_and_quit }.to raise_error SystemExit
-      end
-    end
-
-    describe "display_help_and_quit" do
-      it "does what is says" do
-        expect { subject.display_help_and_quit }.to raise_error SystemExit
-      end
-    end
-
-    describe "display_version_and_quit" do
-      it "does what is says" do
-        expect { subject.display_version_and_quit }.to raise_error SystemExit
-      end
-    end
-
-    describe "display_player_error_and_quit" do
-      it "does what is says" do
-        expect { subject.display_player_error_and_quit }.to raise_error SystemExit
-      end
+    it "does what it says" do
+      METHOD_NAMES.each { |m| expect { subject.send(m) }.to raise_error SystemExit }
     end
   end
 end
