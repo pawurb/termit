@@ -8,7 +8,7 @@ require 'termit'
 begin
   options = Termit::UserInputParser.new(ARGV).options
   Termit::Main.new(options).translate
-rescue Interrupt
+rescue Interrupt # user pressed CTRL+C
   STDERR.puts "\nTermit: exiting due to user request"
   exit 130
 end

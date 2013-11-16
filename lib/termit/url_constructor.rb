@@ -8,11 +8,7 @@ module Termit
     end
 
     def url
-      if @options[:talk]
-        construct_sound_url
-      else
-        construct_text_url
-      end
+      @options[:talk] ? construct_sound_url : construct_text_url
     end
 
     private

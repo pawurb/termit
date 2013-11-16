@@ -38,8 +38,8 @@ module Termit
     def validate_user_input
       raise ArgumentError unless @user_input.is_a? Array
       raise ArgumentError unless @user_input.length > 1
-      [0, 1].each do |index|
-        raise ArgumentError unless [2, 4].include?(@user_input[index].length)
+      @user_input.first(2).each do |language_code|
+        raise ArgumentError unless [2, 4].include? language_code.length
       end
     end
 
