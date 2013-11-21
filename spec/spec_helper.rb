@@ -8,7 +8,20 @@ Coveralls.wear!
 require_relative '../lib/termit'
 
 RSpec.configure do |config|
-  # some (optional) config here
+  original_stderr = $stderr
+  original_stdout = $stdout
+
+  #silence test output
+  config.before(:all) do
+    $stderr = File.new(File.join(File.dirname(__FILE__), 'null.txt'), 'w')
+    $stdout = File.new(File.join(File.dirname(__FILE__), 'null.txt'), 'w')
+  end
+
+  config.after(:all) do
+    $stderr = original_stderr
+    $stdout = original_stdout
+    File.delete(File.join(File.dirname(__FILE__), 'null.txt'))
+  end
 end
 
 VCR.configure do |c|
