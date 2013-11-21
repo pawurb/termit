@@ -22,6 +22,11 @@ RSpec.configure do |config|
     $stdout = original_stdout
     File.delete(File.join(File.dirname(__FILE__), 'null.txt'))
   end
+
+  #for nyan cat formatter
+  config.before(:each) do
+    sleep(0.1)
+  end
 end
 
 VCR.configure do |c|
