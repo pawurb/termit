@@ -1,7 +1,7 @@
 #Termit [![Build Status](https://travis-ci.org/pawurb/termit.png)](https://travis-ci.org/pawurb/termit) [![Gem Version](https://badge.fury.io/rb/termit.png)](http://badge.fury.io/rb/termit) [![Coverage Status](https://coveralls.io/repos/pawurb/termit/badge.png)](https://coveralls.io/r/pawurb/termit)
 
 
-Termit is an easy way to use Google Translate in your terminal. I call it like this because Termislator_G is too long to type.
+Termit is an easy way to use Google Translate in your terminal. I called it like this because Termislator_G was too long to type.
 
 ## Installation
 ```ruby
