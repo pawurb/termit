@@ -39,7 +39,7 @@ termit en zh "hey cowboy where is your horse?" -t
 
 You can use termit as a speech synthesizer of any supported language without having to translate anything:
 ``` ruby
-termit en en "hold your horses cowboy !"  -t
+termit en en "hold your horses cowboy !" -t
 ```
 
 #### Synonyms
