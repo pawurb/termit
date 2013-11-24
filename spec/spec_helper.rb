@@ -11,21 +11,23 @@ RSpec.configure do |config|
   original_stderr = $stderr
   original_stdout = $stdout
 
-  #silence test output
-  config.before(:all) do
-    $stderr = File.new(File.join(File.dirname(__FILE__), 'null.txt'), 'w')
-    $stdout = File.new(File.join(File.dirname(__FILE__), 'null.txt'), 'w')
+  # redirect output to file
+  config.before(:suite) do
+    $stderr = File.new(File.join(File.dirname(__FILE__), 'output.txt'), 'w')
+    $stdout = File.new(File.join(File.dirname(__FILE__), 'output.txt'), 'w')
   end
 
-  config.after(:all) do
+  config.after(:suite) do
     $stderr = original_stderr
     $stdout = original_stdout
-    File.delete(File.join(File.dirname(__FILE__), 'null.txt'))
+    system "echo '=======Specs output:======='"
+    system "cat spec/output.txt"
+    File.delete(File.join(File.dirname(__FILE__), 'output.txt'))
   end
 
   #for nyan cat formatter
   config.before(:each) do
-    sleep(0.1)
+    sleep(0.10)
   end
 end
 
