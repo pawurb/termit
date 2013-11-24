@@ -34,12 +34,13 @@ termit fr ru qui est votre papa?
 Specify a **-t** (talk) flag to use speech synthesis (requires mpg123):
 ``` ruby
 termit en zh "hey cowboy where is your horse?" -t
-=> "嘿，牛仔是你的马在哪里？" #and a chinese voice says something about a horse
+=> "嘿，牛仔是你的马在哪里？" # and a chinese voice says something about a horse
 ```
 
 You can use termit as a speech synthesizer of any supported language without having to translate anything:
 ``` ruby
 termit en en "hold your horses cowboy !" -t
+=> "hold your horses cowboy !" # and an english voice asks you to hold on
 ```
 
 #### Synonyms
