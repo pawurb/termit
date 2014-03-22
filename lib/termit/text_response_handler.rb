@@ -26,10 +26,10 @@ module Termit
     def extract_synonyms
       synonyms_data = @text.split("[[")[2].split("[")[1]
       length = synonyms_data.length
-      if synonyms_data[0] == '4' #there are no synonyms
-        " ---"
-      else
+      if synonyms_available synonyms_data
         synonyms_data[0..(length-3)].delete("\"").gsub(/(,)/, ", ")
+      else
+        " ---"
       end
     end
 
@@ -37,6 +37,10 @@ module Termit
       encoding = 'UTF-8'
       text.gsub!(/(\\x26#39;)/, "'")
       text.force_encoding(encoding).encode(encoding)
+    end
+
+    def synonyms_available synonyms_data
+      !synonyms_data.include?('true,false')
     end
   end
 end
