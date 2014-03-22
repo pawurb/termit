@@ -10,6 +10,7 @@ describe Termit::TextTranslator do
         expect(translator.text).to eq 'hey cowboy gdzie jest twój koń'
       end
     end
+  end
 
   describe "translated_text" do
     it "translates text correctly" do
@@ -19,7 +20,5 @@ describe Termit::TextTranslator do
         expect(translator.text).to eq 'tyłek'
       end
     end
-  end
-
   end
 end
