@@ -53,7 +53,7 @@ termit es en muchacho -s
 ```
 
 #### Learning language when commiting to git (zsh only)
-Idea by [Nedomas](https://news.ycombinator.com/item?id=7545747)
+Idea by [Nedomas](https://news.ycombinator.com/item?id=7545747) .
 In **~/.zshrc**
 ```bash
 export LANG=es
