@@ -52,7 +52,7 @@ termit es en muchacho -s
 => Synonyms: boy, lad, youngster, laddie, cully
 ```
 
-#### Learning language when commiting to git (zsh only)
+#### Learning language when committing to git (zsh only)
 Idea by [Nedomas](https://news.ycombinator.com/item?id=7545747) .
 In **~/.zshrc**
 ```bash
