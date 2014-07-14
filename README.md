@@ -53,7 +53,7 @@ termit es en muchacho -s
 ```
 
 #### Learning language when committing to git (zsh only)
-Idea by [Nedomas](https://news.ycombinator.com/item?id=7545747) . See and hear your messages translated to target lang every time you commit.
+Idea by [Nedomas](https://news.ycombinator.com/item?id=7545747) . See and hear your messages translated to target lang every time you commit:
 
 In **~/.zshrc**
 ```bash
