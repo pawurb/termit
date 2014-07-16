@@ -88,11 +88,6 @@ For MacOSX:
 
     brew install mpg123
 
-## Status
-
-This is my first open-source project for people to use. Any feedback will be appreciated.
-
-You can contact me on: p.urbanek89@gmail.com
 
 
 
