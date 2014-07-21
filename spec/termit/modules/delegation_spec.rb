@@ -23,5 +23,9 @@ describe "Delegation module" do
     it "enables delegating to target objects" do
       expect(subject.hello).to eq 'Hello there'
     end
+
+    it "still raises error if method is not defined" do
+      expect { subject.goodbye }.to raise_error(NoMethodError)
+    end
   end
 end
