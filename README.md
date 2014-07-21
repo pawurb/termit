@@ -1,7 +1,8 @@
 #Termit [![Build Status](https://travis-ci.org/pawurb/termit.png)](https://travis-ci.org/pawurb/termit) [![Gem Version](https://badge.fury.io/rb/termit.png)](http://badge.fury.io/rb/termit) [![Coverage Status](https://coveralls.io/repos/pawurb/termit/badge.png)](https://coveralls.io/r/pawurb/termit)
 
 
-Termit is an easy way to use Google Translate in your terminal.
+Termit is an easy way to use Google Translate in your terminal. You can check out its node npm version [normit](https://github.com/pawurb/normit)
+
 
 ## Installation
 ```ruby
@@ -52,6 +53,14 @@ termit es en muchacho -s
 => Synonyms: boy, lad, youngster, laddie, cully
 ```
 
+#### Learning language when committing to git (zsh only)
+Idea by [Nedomas](https://news.ycombinator.com/item?id=7545747) . See and hear your messages translated to target lang every time you commit:
+
+In **~/.zshrc**
+```bash
+export LANG=es
+git(){[[ "$@" = commit\ -m* ]]&&termit en $LANG ${${@:$#}//./} -t;command git $@}
+```
 
 
 ## Language codes:
@@ -80,11 +89,6 @@ For MacOSX:
 
     brew install mpg123
 
-## Status
-
-This is my first open-source project for people to use. Any feedback will be appreciated.
-
-You can contact me on: p.urbanek89@gmail.com
 
 
 
