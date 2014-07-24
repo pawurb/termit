@@ -7,7 +7,7 @@ module Termit
     end
 
     def display_player_error_and_quit
-      message = "Termit speech synthesis requires mpg123 installed."
+      message = "TERMIT: speech synthesis requires mpg123 installed."
       case Gem::Platform.local.os
       when "darwin"
         message << "\nPlease run 'brew install mpg123'"
@@ -50,6 +50,11 @@ EOS
     def display_synonyms synonyms
       print '=> Synonyms: '
       puts synonyms
+    end
+
+    def display_no_internet_msg
+      puts "TERMIT: There seems to be a problem with your internet connection"
+      exit
     end
   end
 end

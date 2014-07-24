@@ -4,6 +4,10 @@ require 'uri'
 
 module Termit
   class DataFetcher
+    extend ::Delegation
+    @output_manager = Termit::OutputManager.new
+    delegate :display_no_internet_msg, to: @output_manager
+
     def initialize url, text
       @url = url
       @text = text
@@ -21,6 +25,8 @@ module Termit
       request = Net::HTTP::Post.new(uri.request_uri)
       request.set_form_data(text: @text)
       http.request(request)
+    rescue SocketError
+      display_no_internet_msg
     end
   end
 end
