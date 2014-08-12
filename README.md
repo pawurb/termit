@@ -73,7 +73,7 @@ git(){[[ "$@" = commit\ -m* ]]&&termit en $LANG ${${@:$#}//./} -t;command git $@
 * russian - ru
 * automatic source language detection - auto
 
-To find all available language codes visit www.translate.google.com. Choose langauges and their codes will appear in the url.
+To find all available language codes visit https://developers.google.com/translate/v2/using_rest#language-params.
 
 ## Requirements
 
