@@ -1,7 +1,7 @@
 module Termit
   module CanOutput
     def self.included(klass)
-      klass.send(:include, ::DelegateIt)
+      klass.send(:extend, ::DelegateIt)
     end
 
     def output_manager
