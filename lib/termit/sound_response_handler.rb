@@ -23,6 +23,3 @@ module Termit
     end
   end
 end
-
-
-

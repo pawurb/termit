@@ -42,4 +42,3 @@ describe Termit::TextResponseHandler do
     end
   end
 end
-
