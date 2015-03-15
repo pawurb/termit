@@ -1,4 +1,4 @@
-require 'termit/modules/delegation'
+require 'delegate_it'
 require 'termit/output_manager'
 require 'termit/user_input_parser'
 require 'termit/main'

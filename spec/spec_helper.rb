@@ -4,12 +4,19 @@ require 'vcr'
 require 'webmock/rspec'
 require 'coveralls'
 Coveralls.wear!
-
 require_relative '../lib/termit'
 
 RSpec.configure do |config|
   original_stderr = $stderr
   original_stdout = $stdout
+
+  config.mock_with :rspec do |c|
+    c.syntax = [:should, :expect]
+  end
+
+  config.expect_with :rspec do |c|
+    c.syntax = [:should, :expect]
+  end
 
   # redirect output to file
   config.before(:suite) do

@@ -1,10 +1,9 @@
 #encoding: UTF-8
 module Termit
   class UserInputParser
-    extend ::Delegation
-    @output_manager = Termit::OutputManager.new
+    include ::DelegateIt
 
-    delegate :display_error_info_and_quit, :display_help_and_quit, :display_version_and_quit, to: @output_manager
+    delegate :display_error_info_and_quit, :display_help_and_quit, :display_version_and_quit, to: :output_manager
 
     def initialize user_input
       @user_input = user_input
@@ -46,6 +45,10 @@ module Termit
     def quit_if_required
       display_help_and_quit if @user_input.index("-h") || @user_input.empty?
       display_version_and_quit if @user_input.index("-v")
+    end
+
+    def output_manager
+      @output ||= Termit::OutputManager.new
     end
   end
 end

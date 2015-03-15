@@ -1,9 +1,8 @@
 #encoding: UTF-8
 module Termit
   class TextResponseHandler
-    extend ::Delegation
-    @output_manager = Termit::OutputManager.new
-    delegate :display_synonyms, :display_translation, to: @output_manager
+    include ::DelegateIt
+    delegate :display_synonyms, :display_translation, to: :output_manager
 
     def initialize text, synonyms_wanted
       @text = decode text
@@ -41,6 +40,10 @@ module Termit
 
     def synonyms_available synonyms_data
       !synonyms_data.include?('true,false')
+    end
+
+    def output_manager
+      @output ||= Termit::OutputManager.new
     end
   end
 end

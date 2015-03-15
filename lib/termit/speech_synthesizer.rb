@@ -1,9 +1,8 @@
 #encoding: UTF-8
 module Termit
   class SpeechSynthesizer
-    extend ::Delegation
-    @output_manager = Termit::OutputManager.new
-    delegate :display_player_error_and_quit, to: @output_manager
+    include ::DelegateIt
+    delegate :display_player_error_and_quit, to: :output_manager
 
     def initialize options
       check_sound_player
@@ -23,5 +22,9 @@ module Termit
         display_player_error_and_quit
       end
     end
- end
+
+    def output_manager
+      @output ||= Termit::OutputManager.new
+    end
+  end
 end

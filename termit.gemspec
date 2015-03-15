@@ -16,9 +16,10 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(spec)/})
   gem.require_paths = ["lib"]
   gem.license       = "MIT"
-  gem.add_development_dependency "rspec", '~> 2.14.1'
-  gem.add_development_dependency "vcr", '~> 2.5.0'
-  gem.add_development_dependency "webmock", '~> 1.12.0'
+  gem.add_dependency "delegate_it"
+  gem.add_development_dependency "rspec"
+  gem.add_development_dependency "vcr"
+  gem.add_development_dependency "webmock"
   gem.add_development_dependency "rake"
   gem.add_development_dependency "coveralls"
   gem.add_development_dependency "nyan-cat-formatter"
