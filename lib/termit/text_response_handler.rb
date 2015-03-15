@@ -1,7 +1,7 @@
 #encoding: UTF-8
 module Termit
   class TextResponseHandler
-    include ::DelegateIt
+    include CanOutput
     delegate :display_synonyms, :display_translation, to: :output_manager
 
     def initialize text, synonyms_wanted
@@ -40,10 +40,6 @@ module Termit
 
     def synonyms_available synonyms_data
       !synonyms_data.include?('true,false')
-    end
-
-    def output_manager
-      @output ||= Termit::OutputManager.new
     end
   end
 end

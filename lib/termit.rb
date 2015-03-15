@@ -1,5 +1,6 @@
 require 'delegate_it'
 require 'termit/output_manager'
+require 'termit/can_output'
 require 'termit/user_input_parser'
 require 'termit/main'
 require 'termit/sound_response_handler'

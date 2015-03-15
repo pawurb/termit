@@ -1,7 +1,7 @@
 #encoding: UTF-8
 module Termit
   class SpeechSynthesizer
-    include ::DelegateIt
+    include CanOutput
     delegate :display_player_error_and_quit, to: :output_manager
 
     def initialize options
@@ -21,10 +21,6 @@ module Termit
       unless system 'which mpg123 > /dev/null'
         display_player_error_and_quit
       end
-    end
-
-    def output_manager
-      @output ||= Termit::OutputManager.new
     end
   end
 end
