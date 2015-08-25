@@ -4,6 +4,10 @@
 Termit is an easy way to use Google Translate in your terminal. You can check out its node.js npm version [normit](https://github.com/pawurb/normit)
 
 
+## Status
+
+It stopped working recently. The Google People must have messed something up in their APIs. I do not have time to fix it now, so PR's are welcome.
+
 ## Installation
 ```ruby
 gem install termit
