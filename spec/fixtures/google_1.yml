@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://translate.google.com/translate_a/single?client=t&dt=at&hl=pl&ie=UTF-8&kc=2&oe=UTF-8&otf=2&q=hey%20cowboy%20where%20is%20your%20horse&sl=en&srcrom=1&ssel=3&tk=522578&tl=pl&tsel=6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      Date:
+      - Tue, 25 Aug 2015 19:15:47 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - attachment; filename="f.txt"
+      Server:
+      - HTTP server (unknown)
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W1tbImhlaiBrb3dib2plbSAsIGdkemllIGplc3QgdHfDs2oga2/FhCIsImhl
+        eSBjb3dib3kgd2hlcmUgaXMgeW91ciBob3JzZSIsLCwwXV0sLCJlbiIsLCxb
+        WyJoZXkiLDEsW1siaGVqIiw5OTksdHJ1ZSxmYWxzZV0sWyJoZXkiLDAsdHJ1
+        ZSxmYWxzZV0sWyJDemXFm8SHIiwwLHRydWUsZmFsc2VdXSxbWzAsM11dLCJo
+        ZXkgY293Ym95IHdoZXJlIGlzIHlvdXIgaG9yc2UiLDAsMV0sWyJjb3dib3ki
+        LDIsW1sia293Ym9qZW0iLDk1Myx0cnVlLGZhbHNlXSxbImtvd2JvaiIsMjcs
+        dHJ1ZSxmYWxzZV0sWyJrb3dib2pza2llIiwxNyx0cnVlLGZhbHNlXSxbImtv
+        d2JvanNraSIsMSx0cnVlLGZhbHNlXSxbIkNvd2JveSIsMCx0cnVlLGZhbHNl
+        XV0sW1s0LDEwXV0sLDEsMl0sWyJ3aGVyZSIsMyxbWyIsIGdkemllIiw5NTMs
+        ZmFsc2UsZmFsc2VdLFsiZ2R6aWUiLDEsZmFsc2UsZmFsc2VdXSxbWzExLDE2
+        XV0sLDIsNF0sWyJpcyIsNCxbWyJqZXN0Iiw5NTIsdHJ1ZSxmYWxzZV0sWyJt
+        YSIsMCx0cnVlLGZhbHNlXSxbInPEhSIsMCx0cnVlLGZhbHNlXSxbInRvIiww
+        LHRydWUsZmFsc2VdLFsic2nEmSIsMCx0cnVlLGZhbHNlXV0sW1sxNywxOV1d
+        LCw0LDVdLFsieW91ciBob3JzZSIsNSxbWyJ0d8OzaiBrb8WEIiw5OTQsdHJ1
+        ZSxmYWxzZV0sWyJrb8WEIiwyLHRydWUsZmFsc2VdLFsic3dvamVnbyBrb25p
+        YSIsMCx0cnVlLGZhbHNlXSxbImtvbmlhIiwwLHRydWUsZmFsc2VdLFsia29u
+        aW93aSIsMCx0cnVlLGZhbHNlXV0sW1syMCwzMF1dLCw1LDddXSwwLjE3NTQ0
+        NDU3LCxbWyJlbiJdLCxbMC4xNzU0NDQ1N11dXQ==
+    http_version: 
+  recorded_at: Tue, 25 Aug 2015 19:15:47 GMT
+recorded_with: VCR 2.9.3
