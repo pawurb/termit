@@ -21,8 +21,10 @@ module Termit
     def send_request
       uri = URI.parse @url
       http = Net::HTTP.new(uri.host, uri.port)
-      request = Net::HTTP::Post.new(uri.request_uri)
-      request.set_form_data(text: @text)
+      query = "q=#{URI::encode(@text)}"
+      url = "#{uri.request_uri}&#{query}"
+      request = Net::HTTP::Get.new(url)
+      http.use_ssl = true
       http.request(request)
     rescue SocketError
       display_no_internet_msg

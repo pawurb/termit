@@ -1,73 +1,66 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: http://translate.google.com/translate_a/t?client=t&hl=pl&ie=UTF-8&oe=UTF-8&prev=enter&sc=2&sl=en&ssel=0&tl=pl&tsel=0
+    method: get
+    uri: https://translate.google.com/translate_a/single?client=t&dt=at&hl=pl&ie=UTF-8&kc=2&oe=UTF-8&otf=2&q=hey%20cowboy%20where%20is%20your%20horse&sl=en&srcrom=1&ssel=3&tk=522578%7C870062&tl=pl&tsel=6
     body:
       encoding: US-ASCII
-      string: text=hey+cowboy+where+is+your+horse
+      string: ''
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
-      Content-Type:
-      - application/x-www-form-urlencoded
   response:
     status:
       code: 200
       message: OK
     headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      Date:
+      - Tue, 25 Aug 2015 18:55:20 GMT
       Pragma:
       - no-cache
-      Date:
-      - Wed, 23 Oct 2013 15:15:36 GMT
       Expires:
-      - Wed, 23 Oct 2013 15:15:36 GMT
+      - Fri, 01 Jan 1990 00:00:00 GMT
       Cache-Control:
-      - private, max-age=600
+      - no-cache, no-store, must-revalidate
       Content-Type:
-      - text/javascript; charset=UTF-8
-      Content-Language:
-      - pl
-      Set-Cookie:
-      - PREF=ID=59f956040e7bb9f8:TM=1382541336:LM=1382541336:S=8F7wmAjCUSXM3gWD; expires=Fri,
-        23-Oct-2015 15:15:36 GMT; path=/; domain=.google.com
+      - application/json; charset=UTF-8
       X-Content-Type-Options:
       - nosniff
       Content-Disposition:
-      - attachment
+      - attachment; filename="f.txt"
       Server:
       - HTTP server (unknown)
       X-Xss-Protection:
       - 1; mode=block
-      Alternate-Protocol:
-      - 80:quic
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        W1tbImhleSBjb3dib3kgZ2R6aWUgamVzdCB0d8OzaiBrb8WEIiwiaGV5IGNv
-        d2JveSB3aGVyZSBpcyB5b3VyIGhvcnNlIiwiIiwiIl1dLCwiZW4iLCxbWyJo
-        ZXkiLFs0XSwxLDAsNzk3LDAsMSwwXSxbImNvd2JveSIsWzVdLDEsMCw3OTEs
-        MSwyLDBdLFsiZ2R6aWUiLFs2XSwxLDAsNzU5LDIsMywwXSxbImplc3QiLFs3
-        XSwxLDAsNzU3LDMsNCwwXSxbInR3w7NqIGtvxYQiLFs4XSwxLDAsNzAzLDQs
-        NiwwXV0sW1siaGV5Iiw0LFtbImhleSIsNzk3LDEsMF0sWyJoZWoiLDIwMiwx
-        LDBdLFsiQ3plxZvEhyIsMCwxLDBdXSxbWzAsM11dLCJoZXkgY293Ym95IHdo
-        ZXJlIGlzIHlvdXIgaG9yc2UiXSxbImNvd2JveSIsNSxbWyJjb3dib3kiLDc5
-        MSwxLDBdLFsia293Ym9qIiw1LDEsMF0sWyJrb3dib2plbSIsMCwxLDBdLFsi
-        a293Ym9qc2tpZSIsMCwxLDBdLFsia293Ym9qc2tpIiwwLDEsMF1dLFtbNCwx
-        MF1dLCIiXSxbIndoZXJlIiw2LFtbImdkemllIiw3NTksMSwwXSxbImt0w7Ny
-        eW0iLDAsMSwwXSxbImt0w7NyeWNoIiwwLDEsMF0sWyJ3IGt0w7NyeW0iLDAs
-        MSwwXV0sW1sxMSwxNl1dLCIiXSxbImlzIiw3LFtbImplc3QiLDc1NywxLDBd
-        LFsidG8iLDAsMSwwXSxbIm1hIiwwLDEsMF0sWyJ6bmFqZHVqZSIsMCwxLDBd
-        LFsic2nEmSIsMCwxLDBdXSxbWzE3LDE5XV0sIiJdLFsieW91ciBob3JzZSIs
-        OCxbWyJ0d8OzaiBrb8WEIiw3MDMsMSwwXSxbImtvxYQiLDUzLDEsMF0sWyJr
-        b25pYSIsMCwxLDBdLFsidHdvamVnbyBrb25pYSIsMCwxLDBdLFsic3dvamVn
-        byBrb25pYSIsMCwxLDBdXSxbWzIwLDMwXV0sIiJdXSwsLFtbImVuIl1dLDFd
+        W1tbImhlaiBrb3dib2plbSAsIGdkemllIGplc3QgdHfDs2oga2/FhCIsImhl
+        eSBjb3dib3kgd2hlcmUgaXMgeW91ciBob3JzZSIsLCwwXV0sLCJlbiIsLCxb
+        WyJoZXkiLDEsW1siaGVqIiw5OTksdHJ1ZSxmYWxzZV0sWyJoZXkiLDAsdHJ1
+        ZSxmYWxzZV0sWyJDemXFm8SHIiwwLHRydWUsZmFsc2VdXSxbWzAsM11dLCJo
+        ZXkgY293Ym95IHdoZXJlIGlzIHlvdXIgaG9yc2UiLDAsMV0sWyJjb3dib3ki
+        LDIsW1sia293Ym9qZW0iLDk1Myx0cnVlLGZhbHNlXSxbImtvd2JvaiIsMjcs
+        dHJ1ZSxmYWxzZV0sWyJrb3dib2pza2llIiwxNyx0cnVlLGZhbHNlXSxbImtv
+        d2JvanNraSIsMSx0cnVlLGZhbHNlXSxbIkNvd2JveSIsMCx0cnVlLGZhbHNl
+        XV0sW1s0LDEwXV0sLDEsMl0sWyJ3aGVyZSIsMyxbWyIsIGdkemllIiw5NTMs
+        ZmFsc2UsZmFsc2VdLFsiZ2R6aWUiLDEsZmFsc2UsZmFsc2VdXSxbWzExLDE2
+        XV0sLDIsNF0sWyJpcyIsNCxbWyJqZXN0Iiw5NTIsdHJ1ZSxmYWxzZV0sWyJt
+        YSIsMCx0cnVlLGZhbHNlXSxbInPEhSIsMCx0cnVlLGZhbHNlXSxbInRvIiww
+        LHRydWUsZmFsc2VdLFsic2nEmSIsMCx0cnVlLGZhbHNlXV0sW1sxNywxOV1d
+        LCw0LDVdLFsieW91ciBob3JzZSIsNSxbWyJ0d8OzaiBrb8WEIiw5OTQsdHJ1
+        ZSxmYWxzZV0sWyJrb8WEIiwyLHRydWUsZmFsc2VdLFsic3dvamVnbyBrb25p
+        YSIsMCx0cnVlLGZhbHNlXSxbImtvbmlhIiwwLHRydWUsZmFsc2VdLFsia29u
+        aW93aSIsMCx0cnVlLGZhbHNlXV0sW1syMCwzMF1dLCw1LDddXSwwLjE3NTQ0
+        NDU3LCxbWyJlbiJdLCxbMC4xNzU0NDQ1N11dXQ==
     http_version: 
-  recorded_at: Wed, 23 Oct 2013 15:15:36 GMT
-recorded_with: VCR 2.5.0
+  recorded_at: Tue, 25 Aug 2015 18:55:20 GMT
+recorded_with: VCR 2.9.3

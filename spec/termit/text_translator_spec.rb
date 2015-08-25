@@ -7,7 +7,7 @@ describe Termit::TextTranslator do
       VCR.use_cassette('google_1') do
         translator = Termit::TextTranslator.new source_lang: :en, target_lang: :pl, text: 'hey cowboy where is your horse'
         translator.call
-        expect(translator.text).to eq 'hey cowboy gdzie jest twój koń'
+        expect(translator.text).to eq 'hej kowbojem , gdzie jest twój koń'
       end
     end
   end
