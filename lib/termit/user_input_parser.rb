@@ -25,7 +25,7 @@ module Termit
        synonyms: extract_flag('s'),
        source_lang: @user_input.shift.to_sym,
        target_lang: @user_input.shift.to_sym,
-       text: @user_input.join(' ')
+       text: @user_input.join(' ').gsub('.', ',')
       }
     end
 
