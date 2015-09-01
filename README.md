@@ -52,19 +52,36 @@ termit es en muchacho -s
 => Synonyms: boy, lad, youngster, laddie, cully
 ```
 
-#### Learning language when committing to git (zsh only)
-Idea by [Nedomas](https://news.ycombinator.com/item?id=7545747) . See and hear your messages translated to target lang every time you commit:
+#### Learning language when committing to git
+
+Idea by [Nedomas](https://news.ycombinator.com/item?id=7545747). See and hear your messages translated to target lang every time you commit. You can do this two ways: overriding the `git` command, and using a post-commit hook in git.
+
+##### Override the `git` command (zsh only)
 
 In **~/.zshrc**
-```bash
+
+``` bash
 export LANG=es
 git(){[[ "$@" = commit\ -m* ]]&&termit en $LANG ${${@:$#}//./} -t;command git $@}
 ```
 
 I am no shell ninja so if you know how to make it work in bash then please submit a PR.
 
+##### Using a post-commit hook
+
+Add a file named `post-commit` to your project's `.git/hooks` directory, with this in it:
+
+```bash
+termit en es "`git log -1 --pretty=format:'%s'`" -t
+```
+
+Remember to switch the languages according to your preference.
+
+If you want this to be in every one of your git repositories, see [this Stack Overflow answer](http://stackoverflow.com/a/8842663/249801).
+
 
 ## Language codes:
+
 * english - en
 * polish - pl
 * french - fr
