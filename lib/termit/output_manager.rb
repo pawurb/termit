@@ -18,21 +18,21 @@ module Termit
     end
 
     def display_help_and_quit
-      puts    <<-EOS
-=========TERMIT=========
-Usage:
-termit 'source_language' 'target_language' 'text'
+      puts <<-EOS.gsub(/^ {8}/, '')
+        =========TERMIT=========
+        Usage:
+        termit SOURCE_LANGUAGE TARGET_LANGUAGE TEXT
 
-Example:
-termit en fr 'hey cowboy where is your horse?'
-=> 'hey cow-boy ou est votre cheval?'
+        Example:
+        termit en fr 'hey cowboy where is your horse?'
+        => 'hey cow-boy ou est votre cheval?'
 
-Options:
--t - speech synthesis
--s - synonyms list
+        Options:
+        -t - speech synthesis
+        -s - synonyms list
 
-Check docs at: github.com/pawurb/termit
-EOS
+        Check docs at: github.com/pawurb/termit
+        EOS
       exit
     end
 
