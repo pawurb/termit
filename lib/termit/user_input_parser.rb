@@ -25,7 +25,7 @@ module Termit
        synonyms: extract_flag('s'),
        source_lang: @user_input.shift.to_sym,
        target_lang: @user_input.shift.to_sym,
-       text: @user_input.join(' ').gsub('.', ',')
+       text: @user_input.join(' ').tr('.', ',')
       }
     end
 
@@ -36,7 +36,6 @@ module Termit
 
     def validate_user_input
       raise ArgumentError unless @user_input.is_a? Array
-      raise ArgumentError unless @user_input.length > 1
       @user_input.first(2).each do |language_code|
         raise ArgumentError unless [2, 4].include? language_code.length
       end
