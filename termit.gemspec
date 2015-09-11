@@ -17,6 +17,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.license       = "MIT"
   gem.add_dependency "delegate_it"
+  gem.add_dependency "certifi"
   gem.add_development_dependency "rspec"
   gem.add_development_dependency "vcr"
   gem.add_development_dependency "webmock"
