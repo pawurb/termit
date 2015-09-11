@@ -1,11 +1,15 @@
 #encoding: UTF-8
 require 'net/http'
 require 'uri'
+require 'openssl'
 
 module Termit
   class DataFetcher
     include CanOutput
     delegate :display_no_internet_msg, to: :output_manager
+    silence_warnings do
+      ::OpenSSL::SSL::VERIFY_PEER = ::OpenSSL::SSL::VERIFY_NONE
+    end
 
     def initialize url, text
       @url = url
