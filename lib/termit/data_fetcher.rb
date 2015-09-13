@@ -1,4 +1,5 @@
 #encoding: UTF-8
+require 'certifi'
 require 'net/http'
 require 'uri'
 require 'openssl'
@@ -20,6 +21,7 @@ module Termit
     private
 
     def send_request
+      ENV['SSL_CERT_FILE'] = Certifi.where
       uri = URI.parse @url
       http = Net::HTTP.new(uri.host, uri.port)
       query = "q=#{URI::encode(@text)}"
