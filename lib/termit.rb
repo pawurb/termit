@@ -1,5 +1,4 @@
 require 'delegate_it'
-require 'termit/silence_warnings'
 require 'termit/output_manager'
 require 'termit/can_output'
 require 'termit/user_input_parser'

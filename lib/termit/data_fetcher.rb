@@ -7,9 +7,6 @@ module Termit
   class DataFetcher
     include CanOutput
     delegate :display_no_internet_msg, to: :output_manager
-    silence_warnings do
-      ::OpenSSL::SSL::VERIFY_PEER = ::OpenSSL::SSL::VERIFY_NONE
-    end
 
     def initialize url, text
       @url = url
@@ -29,6 +26,7 @@ module Termit
       url = "#{uri.request_uri}&#{query}"
       request = Net::HTTP::Get.new(url)
       http.use_ssl = true
+      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
       http.request(request)
     rescue SocketError
       display_no_internet_msg
