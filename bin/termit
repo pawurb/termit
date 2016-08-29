@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 require 'rubygems'
 
+# FIX https://github.com/rubygems/rubygems/issues/1420
+def this; self; end
+
 $LOAD_PATH.unshift(File.dirname(__FILE__) + '/../lib') unless $LOAD_PATH.include?(File.dirname(__FILE__) + '/../lib')
 
 require 'termit'
