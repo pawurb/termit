@@ -15,7 +15,7 @@ module Termit
       send_request
     rescue RestClient::BadRequest
       display_invalid_data_msg
-    rescue RestClient::Exception
+    rescue RestClient::Exception, SocketError
       display_error_msg
     end
 
