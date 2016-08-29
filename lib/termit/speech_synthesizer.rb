@@ -18,7 +18,7 @@ module Termit
     private
 
     def check_sound_player
-      unless system 'which mpg123 > /dev/null'
+      unless system 'which mpg123 &> /dev/null'
         display_player_error_and_quit
       end
     end

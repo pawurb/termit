@@ -8,7 +8,7 @@ describe Termit::SoundResponseHandler do
 
     it "saves and plays the sound file the sound file" do
       File.should_receive(:open).with("#{location}/sound_response.mp3", "wb")
-      Object.any_instance.should_receive(:system).with("mpg123 -q #{location}/sound_response.mp3 > /dev/null 2> /dev/null")
+      Object.any_instance.should_receive(:system).with("mpg123 -q #{location}/sound_response.mp3 &> /dev/null")
       subject.call
     end
   end
