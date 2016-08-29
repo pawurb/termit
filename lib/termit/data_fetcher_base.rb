@@ -4,7 +4,7 @@ require 'rest-client'
 module Termit
   class DataFetcherBase
     include CanOutput
-    delegate :display_no_internet_msg, :display_invalid_data_msg, to: :output_manager
+    delegate :display_invalid_data_msg, :display_error_msg,  to: :output_manager
 
     def initialize url, text
       @url = url

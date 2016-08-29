@@ -4,8 +4,10 @@ module Termit
       klass.send(:extend, ::DelegateIt)
     end
 
+    private
+
     def output_manager
-      @output ||= Termit::OutputManager.new
+      @_output ||= Termit::OutputManager.new
     end
   end
 end
