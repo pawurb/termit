@@ -13,7 +13,7 @@ module Termit
       File.open("#{location}/sound_response.mp3", "wb") do |file|
         file.write(@data)
       end
-      system "mpg123 -q #{location}/sound_response.mp3"
+      system "mpg123 -q #{location}/sound_response.mp3 2> /dev/null"
     end
 
     private
