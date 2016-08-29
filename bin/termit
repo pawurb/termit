@@ -2,7 +2,9 @@
 require 'rubygems'
 
 # FIX https://github.com/rubygems/rubygems/issues/1420
-def this; self; end
+class Gem::Specification
+  def this; self; end
+end
 
 $LOAD_PATH.unshift(File.dirname(__FILE__) + '/../lib') unless $LOAD_PATH.include?(File.dirname(__FILE__) + '/../lib')
 
