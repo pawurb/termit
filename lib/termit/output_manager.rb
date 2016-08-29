@@ -29,7 +29,6 @@ termit en fr 'hey cowboy where is your horse?'
 
 Options:
 -t - speech synthesis
--s - synonyms list
 
 Check docs at: github.com/pawurb/termit
 EOS
@@ -47,13 +46,13 @@ EOS
       puts text
     end
 
-    def display_synonyms synonyms
-      print '=> Synonyms: '
-      puts synonyms
+    def display_invalid_data_msg
+      puts "TERMIT: Looks like you provided invalid options, or speech synthesis is not supported for this language."
+      exit
     end
 
-    def display_no_internet_msg
-      puts "TERMIT: There seems to be a problem with your internet connection"
+    def display_error_msg
+      puts "TERMIT: We are sorry but something went wrong."
       exit
     end
   end

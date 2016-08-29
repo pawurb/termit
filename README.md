@@ -1,11 +1,10 @@
 #Termit [![Build Status](https://travis-ci.org/pawurb/termit.png)](https://travis-ci.org/pawurb/termit) [![Gem Version](https://badge.fury.io/rb/termit.png)](http://badge.fury.io/rb/termit) [![Coverage Status](https://coveralls.io/repos/pawurb/termit/badge.png)](https://coveralls.io/r/pawurb/termit)
 
-
-Termit is an easy way to use Google Translate in your terminal. You can check out its node.js npm version [normit](https://github.com/pawurb/normit)
+Termit is an easy way to translate stuff in your terminal. You can check out its node.js npm version [normit](https://github.com/pawurb/normit)
 
 ## Status
 
-Looks like Google blocked the APIs needed for it to work and project is no longer functional.
+I rewrote it to work with [Bing Translator](https://www.bing.com/translator) . Thanks to [Ragnarson](https://ragnarson.com) for supporting it !
 
 ## Installation
 ```ruby
@@ -47,15 +46,6 @@ termit en en "hold your horses cowboy !" -t
 => "hold your horses cowboy !" # and an english voice asks you to hold on
 ```
 
-#### Synonyms
-
-Specify a **-s** (synonyms) flag to get the list of synonyms if available:
-``` ruby
-termit es en muchacho -s
-=> boy
-=> Synonyms: boy, lad, youngster, laddie, cully
-```
-
 #### Learning language when committing to git
 
 Idea by [Nedomas](https://news.ycombinator.com/item?id=7545747). See and hear your messages translated to target lang every time you commit. You can do this two ways: overriding the `git` command, and using a post-commit hook in git.
@@ -86,16 +76,8 @@ If you want this to be in every one of your git repositories, see [this Stack Ov
 
 ## Language codes:
 
-* english - en
-* polish - pl
-* french - fr
-* spanish - es
-* slovakian - sk
-* chinese - zh
-* russian - ru
-* automatic source language detection - auto
+To find all available language codes visit https://msdn.microsoft.com/en-us/library/hh456380.aspx
 
-To find all available language codes visit https://developers.google.com/translate/v2/using_rest#language-params.
 
 ## Requirements
 
@@ -111,7 +93,6 @@ For MacOSX:
 
     brew install mpg123
 
+## Disclaimer
 
-
-
-
+Termit works by scraping the private APIs and is therefore not recommended for use in production or on a large scale.

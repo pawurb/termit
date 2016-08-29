@@ -9,8 +9,8 @@ module Termit
     end
 
     def call
-      response = Termit::DataFetcher.new(@url, @options[:text]).data
-      @text = Termit::TextResponseHandler.new(response.body, @options[:synonyms]).call
+      response = Termit::TextFetcher.new(@url, @options[:text]).data
+      @text = Termit::TextResponseHandler.new(response.body).call
     end
   end
 end

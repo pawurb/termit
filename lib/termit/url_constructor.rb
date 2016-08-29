@@ -1,7 +1,8 @@
 #encoding: UTF-8
+
 module Termit
   class UrlConstructor
-    Host = "https://translate.google.com"
+    Host = "https://www.bing.com"
 
     def initialize options
       @options = options
@@ -14,11 +15,19 @@ module Termit
     private
 
     def construct_text_url
-      "#{Host}/translate_a/single?client=t&sl=#{@options[:source_lang]}&tl=#{@options[:target_lang]}&hl=pl&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&dt=at&ie=UTF-8&oe=UTF-8&otf=2&srcrom=1&ssel=3&tsel=6&kc=2&tk=522578"
+      "#{Host}/translator/api/Translate/TranslateArray?from=#{@options.fetch(:source_lang)}&to=#{@options.fetch(:target_lang)}"
     end
 
     def construct_sound_url
-      "#{Host}/translate_tts?ie=UTF-8&tl=#{@options[:target_lang]}&total=1&idx=0&textlen=5&tk=735012&client=t"
+      "#{Host}/translator/api/language/Speak?locale=#{transform_country_code(@options.fetch(:target_lang))}&gender=male&media=audio/mp3&text=#{URI.encode(@options.fetch(:text))}"
+    end
+
+    def transform_country_code(code)
+      if code == :en
+        'en-US'
+      else
+        "#{code}-#{code.upcase}"
+      end
     end
   end
 end

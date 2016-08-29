@@ -10,10 +10,10 @@ module Termit
     def call
       location = "#{File.expand_path('~')}/.termit"
       create_target_dir location
-      File.open("#{location}/sound_response.mpeg", "wb") do |file|
+      File.open("#{location}/sound_response.mp3", "wb") do |file|
         file.write(@data)
       end
-      system "mpg123 -q #{location}/sound_response.mpeg"
+      system "mpg123 -q #{location}/sound_response.mp3"
     end
 
     private

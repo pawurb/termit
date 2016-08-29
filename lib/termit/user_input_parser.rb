@@ -22,7 +22,6 @@ module Termit
     def parse_input
       {
        talk: extract_flag('t'),
-       synonyms: extract_flag('s'),
        source_lang: @user_input.shift.to_sym,
        target_lang: @user_input.shift.to_sym,
        text: @user_input.join(' ').gsub('.', ',')
@@ -38,7 +37,7 @@ module Termit
       raise ArgumentError unless @user_input.is_a? Array
       raise ArgumentError unless @user_input.length > 1
       @user_input.first(2).each do |language_code|
-        raise ArgumentError unless (2..5).cover? language_code.length
+        raise ArgumentError unless (2..7).cover? language_code.length
       end
     end
 

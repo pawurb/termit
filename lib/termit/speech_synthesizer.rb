@@ -11,7 +11,7 @@ module Termit
     end
 
     def call
-      response = Termit::DataFetcher.new(@url, @text).data
+      response = Termit::SoundFetcher.new(@url, @text).data
       Termit::SoundResponseHandler.new(response.body).call
     end
 

@@ -22,6 +22,7 @@ RSpec.configure do |config|
   config.before(:suite) do
     $stderr = File.new(File.join(File.dirname(__FILE__), 'output.txt'), 'w')
     $stdout = File.new(File.join(File.dirname(__FILE__), 'output.txt'), 'w')
+
   end
 
   config.after(:suite) do
@@ -32,8 +33,11 @@ RSpec.configure do |config|
     File.delete(File.join(File.dirname(__FILE__), 'output.txt'))
   end
 
-  #for nyan cat formatter
+
   config.before(:each) do
+    stub_request(:get, "https://www.bing.com/translator").with(:headers => {'Accept'=>'*/*; q=0.5, application/xml', 'Accept-Encoding'=>'gzip, deflate', 'User-Agent'=>'Ruby'}).to_return(:status => 200, :body => "", :headers => {})
+
+    #for nyan cat formatter
     sleep(0.10)
   end
 end
@@ -41,5 +45,5 @@ end
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/'
   c.hook_into :webmock
-  c.allow_http_connections_when_no_cassette = true
+  c.allow_http_connections_when_no_cassette = false
 end

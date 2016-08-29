@@ -12,7 +12,7 @@ describe Termit::UserInputParser do
     context "when user has specified the options" do
       it "without the -v flag" do
         parser = Termit::UserInputParser.new ['en', 'fr', 'your mother']
-        expect(parser.options).to eq({ source_lang: :en, target_lang: :fr, text: 'your mother', talk: false, synonyms: false })
+        expect(parser.options).to eq({ source_lang: :en, target_lang: :fr, text: 'your mother', talk: false })
       end
 
       it "with the -v (version) flag it exit the program and displays version number" do
@@ -24,19 +24,14 @@ describe Termit::UserInputParser do
       end
 
 
-      it "with -s (synonims) flag" do
-        parser = Termit::UserInputParser.new ['en', 'fr', 'hey cowboy!', '-s']
-        expect(parser.options).to eq({ source_lang: :en, target_lang: :fr, text: 'hey cowboy!', talk: false, synonyms: true })
-      end
-
       it "with -t (talk) flag" do
         parser = Termit::UserInputParser.new ['en', 'fr', 'hey cowboy!', '-t']
-        expect(parser.options).to eq({ source_lang: :en, target_lang: :fr, text: 'hey cowboy!', talk: true, synonyms: false })
+        expect(parser.options).to eq({ source_lang: :en, target_lang: :fr, text: 'hey cowboy!', talk: true })
       end
 
       it "with text as seperate ARGV array elements" do
         parser = Termit::UserInputParser.new ['en', 'fr', 'is', 'cowboy', 'here ?', '-t']
-        expect(parser.options).to eq({ source_lang: :en, target_lang: :fr, text: 'is cowboy here ?', talk: true, synonyms: false })
+        expect(parser.options).to eq({ source_lang: :en, target_lang: :fr, text: 'is cowboy here ?', talk: true })
       end
 
       it "with incorrect language options format raiser error" do
