@@ -25,7 +25,7 @@ termit fr en "qui est votre papa?"
 
 Parenthesis are not necessary for text data input:
 ```ruby
-termit fr ru qui est votre papa?
+termit fr ru qui est votre papa
 => "Кто твой папочка?"
 ```
 
