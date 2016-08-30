@@ -69,11 +69,9 @@ Remember to switch the languages according to your preference.
 
 If you want this to be in every one of your git repositories, see [this Stack Overflow answer](http://stackoverflow.com/a/8842663/249801).
 
-
 ## Language codes:
 
 To find all available language codes visit https://msdn.microsoft.com/en-us/library/hh456380.aspx
-
 
 ## Requirements
 
