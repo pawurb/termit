@@ -2,10 +2,6 @@
 
 Termit is an easy way to translate stuff in your terminal. You can check out its node.js npm version [normit](https://github.com/pawurb/normit)
 
-## Status
-
-I rewrote it to work with [Bing Translator](https://www.bing.com/translator) . Thanks to [Ragnarson](https://ragnarson.com) for supporting it !
-
 ## Installation
 ```ruby
 gem install termit
@@ -92,6 +88,10 @@ For Ubuntu:
 For MacOSX:
 
     brew install mpg123
+
+## Status
+
+It was rewritten to work with [Bing Translator](https://www.bing.com/translator) . Thanks to [Ragnarson](https://ragnarson.com) for supporting it !
 
 ## Disclaimer
 
