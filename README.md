@@ -28,7 +28,7 @@ termit fr ru qui est votre papa
 => "Кто твой папочка?"
 ```
 
-#### Speech synthesis
+### Speech synthesis
 
 Specify a **-t** (talk) flag to use speech synthesis (requires mpg123):
 ```bash
@@ -42,11 +42,11 @@ termit en en "hold your horses cowboy !" -t
 => "hold your horses cowboy !" # and an english voice asks you to hold on
 ```
 
-#### Learning language when committing to git
+### Learning language when committing to git
 
 Idea by [Nedomas](https://news.ycombinator.com/item?id=7545747). See and hear your messages translated to target lang every time you commit. You can do this two ways: overriding the `git` command, and using a post-commit hook in git.
 
-##### Override the `git` command (zsh only)
+#### Override the `git` command (zsh only)
 
 In **~/.zshrc**
 
@@ -57,7 +57,7 @@ git(){[[ "$@" = commit\ -m* ]]&&termit en $LANG ${${@:$#}//./} -t;command git $@
 
 I am no shell ninja so if you know how to make it work in bash then please submit a PR.
 
-##### Using a post-commit hook
+#### Using a post-commit hook
 
 Add a file named `post-commit` to your project's `.git/hooks` directory, with this in it:
 
