@@ -33,7 +33,7 @@ termit fr ru qui est votre papa
 
 Specify a **-t** (talk) flag to use speech synthesis (requires mpg123):
 ``` bash
-normit en fr "hey cowboy where is your horse?" -t
+termit en fr "hey cowboy where is your horse?" -t
 => "Hey cowboy où est votre cheval ?" # and a french voice says something about a horse
 ```
 
