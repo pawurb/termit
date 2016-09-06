@@ -1,4 +1,4 @@
-#Termit [![Build Status](https://travis-ci.org/pawurb/termit.png)](https://travis-ci.org/pawurb/termit) [![Gem Version](https://badge.fury.io/rb/termit.png)](http://badge.fury.io/rb/termit) [![Coverage Status](https://coveralls.io/repos/pawurb/termit/badge.png)](https://coveralls.io/r/pawurb/termit)
+#Termit [![Build Status](https://travis-ci.org/pawurb/termit.svg)](https://travis-ci.org/pawurb/termit) [![Gem Version](https://badge.fury.io/rb/termit.svg)](http://badge.fury.io/rb/termit) [![Coverage Status](https://coveralls.io/repos/pawurb/termit/badge.svg)](https://coveralls.io/r/pawurb/termit)
 
 Termit is an easy way to translate stuff in your terminal. You can check out its node.js npm version [normit](https://github.com/pawurb/normit).
 
