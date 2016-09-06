@@ -3,19 +3,18 @@
 Termit is an easy way to translate stuff in your terminal. You can check out its node.js npm version [normit](https://github.com/pawurb/normit).
 
 ## Installation
-```ruby
+```bash
 gem install termit
 ```
 
 ## Usage
-```ruby
+```bash
 termit 'source_language' 'target_language' 'text'
 ```
 
 Example:
 
-```ruby
-
+```bash
 termit en es "hey cowboy where is your horse?"
 => "Hey vaquero dónde está tu caballo?"
 
@@ -24,7 +23,7 @@ termit fr en "qui est votre papa?"
 ```
 
 Parenthesis are not necessary for text data input:
-```ruby
+```bash
 termit fr ru qui est votre papa
 => "Кто твой папочка?"
 ```
@@ -32,13 +31,13 @@ termit fr ru qui est votre papa
 #### Speech synthesis
 
 Specify a **-t** (talk) flag to use speech synthesis (requires mpg123):
-``` bash
+```bash
 termit en fr "hey cowboy where is your horse?" -t
 => "Hey cowboy où est votre cheval ?" # and a french voice says something about a horse
 ```
 
 You can use termit as a speech synthesizer of any supported language without having to translate anything:
-``` ruby
+```bash
 termit en en "hold your horses cowboy !" -t
 => "hold your horses cowboy !" # and an english voice asks you to hold on
 ```
@@ -51,7 +50,7 @@ Idea by [Nedomas](https://news.ycombinator.com/item?id=7545747). See and hear yo
 
 In **~/.zshrc**
 
-``` bash
+```bash
 export LANG=es
 git(){[[ "$@" = commit\ -m* ]]&&termit en $LANG ${${@:$#}//./} -t;command git $@}
 ```
@@ -81,12 +80,14 @@ Works with Ruby 1.9.2 and higher.
 To use speech synthesis you need to have mpg123 installed.
 
 For Ubuntu:
-
-    sudo apt-get install mpg123
+```bash
+sudo apt-get install mpg123
+```
 
 For MacOSX:
-
-    brew install mpg123
+```bash
+brew install mpg123
+```
 
 ## Status
 
