@@ -14,8 +14,10 @@ module Termit
     def data
       send_request
     rescue RestClient::BadRequest
+      raise if ENV['DEBUG']
       display_invalid_data_msg
     rescue RestClient::Exception, SocketError
+      raise if ENV['DEBUG']
       display_error_msg
     end
 
