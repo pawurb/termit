@@ -5,6 +5,7 @@ module Termit
   class DataFetcherBase
     include CanOutput
     delegate :display_invalid_data_msg, :display_error_msg,  to: :output_manager
+    DUMMY_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'.freeze
 
     def initialize url, text
       @url = url
@@ -24,7 +25,13 @@ module Termit
     private
 
     def self.auth_cookies
-      @@_auth_cookies ||= RestClient.get('https://www.bing.com/translator').cookies
+      @@_auth_cookies ||= RestClient::Request.execute(
+        method: :get,
+        url: 'https://www.bing.com/translator',
+        headers: {
+          'User-Agent' => DUMMY_AGENT
+        }
+      ).cookies
     end
   end
 end
