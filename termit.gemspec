@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Termit::VERSION
   gem.authors       = ["pawurb"]
   gem.email         = ["p.urbanek89@gmail.com"]
-  gem.summary       = %q{Google Translate in your terminal}
-  gem.description   = %q{ Termit is an easy way to use all the Google Translate goodies straight from your terminal. }
+  gem.summary       = %q{ Translations with speech synthesis in your terminal }
+  gem.description   = %q{ Termit is an easy way to translate stuff and use speech synthesis in your terminal. }
   gem.homepage      = "http://github.com/pawurb/termit"
   gem.files         = `git ls-files`.split("\n")
   gem.executables   = ['termit']
