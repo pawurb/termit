@@ -1,21 +1,20 @@
-#Termit [![Build Status](https://travis-ci.org/pawurb/termit.png)](https://travis-ci.org/pawurb/termit) [![Gem Version](https://badge.fury.io/rb/termit.png)](http://badge.fury.io/rb/termit) [![Coverage Status](https://coveralls.io/repos/pawurb/termit/badge.png)](https://coveralls.io/r/pawurb/termit)
+#Termit [![Build Status](https://travis-ci.org/pawurb/termit.svg)](https://travis-ci.org/pawurb/termit) [![Gem Version](https://badge.fury.io/rb/termit.svg)](http://badge.fury.io/rb/termit) [![Coverage Status](https://coveralls.io/repos/pawurb/termit/badge.svg)](https://coveralls.io/r/pawurb/termit)
 
 Termit is an easy way to translate stuff in your terminal. You can check out its node.js npm version [normit](https://github.com/pawurb/normit).
 
 ## Installation
-```ruby
+```bash
 gem install termit
 ```
 
 ## Usage
-```ruby
+```bash
 termit 'source_language' 'target_language' 'text'
 ```
 
 Example:
 
-```ruby
-
+```bash
 termit en es "hey cowboy where is your horse?"
 => "Hey vaquero dónde está tu caballo?"
 
@@ -24,41 +23,41 @@ termit fr en "qui est votre papa?"
 ```
 
 Parenthesis are not necessary for text data input:
-```ruby
+```bash
 termit fr ru qui est votre papa
 => "Кто твой папочка?"
 ```
 
-#### Speech synthesis
+### Speech synthesis
 
 Specify a **-t** (talk) flag to use speech synthesis (requires mpg123):
-``` bash
-normit en fr "hey cowboy where is your horse?" -t
+```bash
+termit en fr "hey cowboy where is your horse?" -t
 => "Hey cowboy où est votre cheval ?" # and a french voice says something about a horse
 ```
 
 You can use termit as a speech synthesizer of any supported language without having to translate anything:
-``` ruby
+```bash
 termit en en "hold your horses cowboy !" -t
 => "hold your horses cowboy !" # and an english voice asks you to hold on
 ```
 
-#### Learning language when committing to git
+### Learning language when committing to git
 
 Idea by [Nedomas](https://news.ycombinator.com/item?id=7545747). See and hear your messages translated to target lang every time you commit. You can do this two ways: overriding the `git` command, and using a post-commit hook in git.
 
-##### Override the `git` command (zsh only)
+#### Override the `git` command (zsh only)
 
 In **~/.zshrc**
 
-``` bash
+```bash
 export LANG=es
 git(){[[ "$@" = commit\ -m* ]]&&termit en $LANG ${${@:$#}//./} -t;command git $@}
 ```
 
 I am no shell ninja so if you know how to make it work in bash then please submit a PR.
 
-##### Using a post-commit hook
+#### Using a post-commit hook
 
 Add a file named `post-commit` to your project's `.git/hooks` directory, with this in it:
 
@@ -81,12 +80,14 @@ Works with Ruby 1.9.2 and higher.
 To use speech synthesis you need to have mpg123 installed.
 
 For Ubuntu:
-
-    sudo apt-get install mpg123
+```bash
+sudo apt-get install mpg123
+```
 
 For MacOSX:
-
-    brew install mpg123
+```bash
+brew install mpg123
+```
 
 ## Status
 
