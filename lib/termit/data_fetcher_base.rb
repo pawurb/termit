@@ -25,13 +25,20 @@ module Termit
     private
 
     def self.auth_cookies
-      @@_auth_cookies ||= RestClient::Request.execute(
-        method: :get,
-        url: 'https://www.bing.com/translator',
-        headers: {
-          'User-Agent' => DUMMY_AGENT
-        }
-      ).cookies
+      @@_auth_cookies ||= begin
+        res = RestClient::Request.execute(
+          method: :get,
+          url: 'https://www.bing.com/translator',
+          headers: {
+            'User-Agent' => DUMMY_AGENT
+          }
+        )
+        shy_cookie = res.headers.fetch(:set_cookie)[0].split(';')[0]
+        key, value = shy_cookie.split('=')
+        res.cookies.tap do |cookies_param|
+          cookies_param[key] = value
+        end
+      end
     end
   end
 end
