@@ -22,7 +22,7 @@ termit fr en "qui est votre papa?"
 => "Who's Your Daddy?"
 ```
 
-Parenthesis are not necessary for text data input:
+Quotation marks are not necessary for text data input:
 ```bash
 termit fr ru qui est votre papa
 => "Кто твой папочка?"
