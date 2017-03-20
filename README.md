@@ -7,6 +7,13 @@ Termit is an easy way to translate stuff in your terminal. You can check out its
 gem install termit
 ```
 
+Under RVM, your termit command may only be available under the ruby you install termit into. To prevent this, and to prevent gem conflicts, install termit into a dedicated gemset and create wrapper scripts:
+
+```ruby
+rvm default@termit --create do gem install termit
+rvm wrapper default@termit --no-prefix termit
+```
+
 ## Usage
 ```bash
 termit 'source_language' 'target_language' 'text'
