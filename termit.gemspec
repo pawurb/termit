@@ -20,7 +20,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency "rest-client"
   gem.add_development_dependency "rspec"
   gem.add_development_dependency "vcr"
-  gem.add_development_dependency "webmock"
+  gem.add_development_dependency "webmock", "~> 2.3.2"
   gem.add_development_dependency "rake"
   gem.add_development_dependency "coveralls"
   gem.add_development_dependency "nyan-cat-formatter"

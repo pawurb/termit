@@ -1,3 +1,3 @@
 module Termit
-  VERSION = "3.7.0"
+  VERSION = "3.8.0"
 end
