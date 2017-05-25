@@ -25,7 +25,7 @@ module Termit
     def transform_country_code(code)
       if code == :en
         'en-US'
-      elsif code.to_s == "zh-CHS"
+      elsif code.to_s == "zh-CHS" || code.to_s == "zh-CHT"
         "zh-CN"
       elsif code.length == 6
         code
